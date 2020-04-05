@@ -178,7 +178,7 @@ That will build and install the language interpreter, along with its dynamic lib
 </code></pre>
 <p>Note that you can also specify number of CPU cores using <code>make -j&lt;number of cores&gt;</code>. This will greatly improve the build time
 of the project. For example, <code>cmake .. &amp;&amp; make -j8 install</code></p>
-<p>This will generate the Feral libraries and binaries which can be used to execute Feral code. The binary which we will use is called <code>et</code> and it should be generated in <code>build/bin/</code> directory of the repository (assuming no <code>PREFIX_DIR</code> is set).</p>
+<p>This will generate the Feral libraries and binaries which can be used to execute Feral code. The binary which we will use is called <code>feral</code> and it should be generated in <code>build/bin/</code> directory of the repository (assuming no <code>PREFIX_DIR</code> is set).</p>
 <p>You can also install <code>ccache</code> to speed up the build process. CMake will autodetect and use it if it finds it.</p>
 <h2><a class="header" href="#standard-library" id="standard-library">Standard Library</a></h2>
 <p>Feral, although usable without its Standard Library, would be extremely limited - to the point of being unusable.
@@ -200,12 +200,12 @@ This command will create <code>.feral</code> directory in your <code>$HOME</code
 <h3><a class="header" href="#prefix_dir" id="prefix_dir">$PREFIX_DIR</a></h3>
 <p>This variable will allow you to set a <code>PREFIX_DIR</code> directory for installation of the language after the build.</p>
 <p><strong>NOTE</strong> that once the script is run with a <code>PREFIX_DIR</code>, manually moving the generated files to desired directories will not work since the Feral's codebase uses this <code>PREFIX_DIR</code> internally itself.</p>
-<p>Generally, the <code>/usr</code> or <code>/usr/local</code> directories are used for setting the <code>PREFIX_DIR</code>, however that is totally up to you. Default value for this is the directory <code>build/</code> inside the source code folder.</p>
+<p>Generally, the <code>/usr</code> or <code>/usr/local</code> directories are used for setting the <code>PREFIX_DIR</code>, however that is totally up to you. Default value for this is the directory <code>/usr/local</code>.</p>
 <p>The script will create these directories with respect to <code>PREFIX_DIR</code>:</p>
 <ul>
-<li><code>buildfiles/et</code> -&gt; <code>$PREFIX_DIR/bin/</code></li>
-<li><code>buildfiles/lib*.so</code> -&gt; <code>$PREFIX_DIR/lib/Feral/</code></li>
-<li><code>include/Feral/*</code> -&gt; <code>$PREFIX_DIR/include/Feral/</code></li>
+<li><code>build/bin/feral</code> -&gt; <code>$PREFIX_DIR/bin/</code></li>
+<li><code>build/lib/feral</code> -&gt; <code>$PREFIX_DIR/lib/</code></li>
+<li><code>include/feral*</code> -&gt; <code>$PREFIX_DIR/include/</code></li>
 </ul>
 <p>An example usage is:</p>
 <pre><code class="language-bash">PREFIX_DIR=/usr/local cmake .. &amp;&amp; make install
