@@ -1,0 +1,595 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Feral Lang</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Feral Lang</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>Welcome to the Feral Language's User Manual. Using this manual, you will be able to understand the usage
+of the language with relevant description and examples.</p>
+<p>Feral is an interpreted, procedural, general purpose programming language which is fundamentally developed
+to write scripts in a very simple and efficient manner. It is most suitable for this use case because of ease of use and simplicity.</p>
+<p>By design, Feral is a <code>minimalistic</code> language. This is not a shortcoming though. As a matter of fact, it supports some interesting
+concepts like first-class citizenship of virtually everything - variables, imports, functions, and even structures. But more on that
+later. Feral is meant to be small since its main purpose is scripting which usually does not require a huge set of complex features
+and hence, it's a rather minimal language, focusing primarily on providing decent performance with ease of use and extensibility.</p>
+<p>This book is made to guide people who want to understand Feral and perhaps use it in their daily life.
+The book shall be the holy grail for this language as it is meant to go over every feature of the language.</p>
+<p>Note that we will not dive deep in the technical details of the language unless required, instead,
+focusing on the usage of the language by the user.</p>
+<p>This guide also intends to go over the standard library of the language with some examples.</p>
+<p>Anyway, let's begin with the installation of the language, and start using it!</p>
+<h1><a class="header" href="#installation" id="installation">Installation</a></h1>
+<p>First of all, to install Feral, your system must meet the prerequisites mentioned in the <strong>README</strong> file <a href="https://github.com/Feral-Lang/Feral/blob/master/README.md">here</a>.
+The basic installation steps are given in that <strong>README</strong>, but this chapter will describe it to a bit more extent.
+Feel free to skip this if you are satisfied with the <strong>README</strong>'s installation procedure.</p>
+<h2><a class="header" href="#compiler-and-virtual-machine" id="compiler-and-virtual-machine">Compiler and Virtual Machine</a></h2>
+<p>For installing the language compiler, first clone the official GitHub repository: <a href="https://github.com/Feral-Lang/Feral">Feral-Lang/Feral</a>.</p>
+<pre><code class="language-bash">git clone https://github.com/Feral-Lang/Feral
+</code></pre>
+<p>Then, <code>cd</code> into the directory, create a <code>build</code> directory, cd into that, run <code>cmake ..</code>, and finally run <code>make install</code>.
+That will build and install the language interpreter, along with its dynamic libraries.</p>
+<pre><code class="language-bash">cd Feral &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make install
+</code></pre>
+<p>Note that you can also specify number of CPU cores using <code>make -j&lt;number of cores&gt;</code>. This will greatly improve the build time
+of the project. For example, <code>cmake .. &amp;&amp; make -j8 install</code></p>
+<p>This will generate the Feral libraries and binaries which can be used to execute Feral code. The binary which we will use is called <code>et</code> and it should be generated in <code>build/bin/</code> directory of the repository (assuming no <code>PREFIX_DIR</code> is set).</p>
+<p>You can also install <code>ccache</code> to speed up the build process. CMake will autodetect and use it if it finds it.</p>
+<h2><a class="header" href="#standard-library" id="standard-library">Standard Library</a></h2>
+<p>Feral, although usable without its Standard Library, would be extremely limited - to the point of being unusable.
+Therefore, we are going to install the Standard Library for the language. To install it clone the following repository, and then follow the installation procedure just like above.</p>
+<pre><code class="language-bash">git clone https://github.com/Feral-Lang/Feral-Std
+cd Feral-Std &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make install
+</code></pre>
+<p>This will install Feral Standard Library alongside the Feral Compiler. Note that the <code>PREFIX_DIR</code> for Feral Compiler and the Standard Library <strong>MUST</strong> be same.</p>
+<p>The cmake scripts for Feral Compiler as well as Standard Library use multiple environment variables which can be set for customizing and optimizing the build process. They are described below.</p>
+<h2><a class="header" href="#initializing-feral" id="initializing-feral">Initializing Feral</a></h2>
+<p>When Feral is first installed, it is recommended to execute the <code>feral init</code> command.
+This command will create <code>.feral</code> directory in your <code>$HOME</code> for installation of external packages should that be desired.</p>
+<h2><a class="header" href="#cmake-environment-variables" id="cmake-environment-variables">CMake Environment Variables</a></h2>
+<h3><a class="header" href="#cxx" id="cxx">$CXX</a></h3>
+<p>This variable is used for specifying the C++ compiler if you do not want to use the ones auto decided by the script which uses <code>g++</code> by default for all operating systems except Android and BSD, for which it uses <code>clang++</code>.</p>
+<p>For example, to explicitly use <code>clang++</code> compiler on an ubuntu (linux) machine, you can use:</p>
+<pre><code class="language-bash">CXX=clang++ cmake .. &amp;&amp; make install
+</code></pre>
+<h3><a class="header" href="#prefix_dir" id="prefix_dir">$PREFIX_DIR</a></h3>
+<p>This variable will allow you to set a <code>PREFIX_DIR</code> directory for installation of the language after the build.</p>
+<p><strong>NOTE</strong> that once the script is run with a <code>PREFIX_DIR</code>, manually moving the generated files to desired directories will not work since the Feral's codebase uses this <code>PREFIX_DIR</code> internally itself.</p>
+<p>Generally, the <code>/usr</code> or <code>/usr/local</code> directories are used for setting the <code>PREFIX_DIR</code>, however that is totally up to you. Default value for this is the directory <code>build/</code> inside the source code folder.</p>
+<p>The script will create these directories with respect to <code>PREFIX_DIR</code>:</p>
+<ul>
+<li><code>buildfiles/et</code> -&gt; <code>$PREFIX_DIR/bin/</code></li>
+<li><code>buildfiles/lib*.so</code> -&gt; <code>$PREFIX_DIR/lib/Feral/</code></li>
+<li><code>include/Feral/*</code> -&gt; <code>$PREFIX_DIR/include/Feral/</code></li>
+</ul>
+<p>An example usage is:</p>
+<pre><code class="language-bash">PREFIX_DIR=/usr/local cmake .. &amp;&amp; make install
+</code></pre>
+<h1><a class="header" href="#hello-world" id="hello-world">Hello World!</a></h1>
+<p>A simple <strong>hello world</strong> program in Feral can be written as:</p>
+<pre><code class="language-py">let io = import('std/io');
+io.println('hello, world');
+</code></pre>
+<p>Save the code in a file named, say <code>hello.fer</code>, and run it using the <code>feral</code> binary which we built in the <a href="./01-install.html">installation</a> document.
+Assuming that no <code>PREFIX_DIR</code> was set, the binary would be created in the <code>build/bin/</code> directory of the cloned repostory. Hence, the command to run our script would be:</p>
+<pre><code class="language-bash">./build/bin/fer hello.fer
+</code></pre>
+<p>This will output <code>hello world</code> on the display.</p>
+<p>Congratulations! You have successfully written your first program in Feral!</p>
+<h1><a class="header" href="#additional-notes" id="additional-notes">Additional Notes</a></h1>
+<p>The <code>io.println</code> function adds a new line at the end of each call, so we did not have to write a new line character (<code>\n</code>).
+But if we want to explicitly write new line characters wherever required without the function doing that internally,
+we can use the <code>io.print</code> function for that.</p>
+<p>For example, if we want to display multiple statements without newline, using <code>print</code>:</p>
+<pre><code class="language-py">io.print('first line');
+io.print('second line');
+</code></pre>
+<p>The output would be:</p>
+<pre><code>first linesecond line
+</code></pre>
+<p>To correct this, we will add a new line at the end of the first <code>print</code> call.</p>
+<pre><code class="language-py">io.print('first line\n');
+io.print('second line');
+</code></pre>
+<p>which then gives us the correct output:</p>
+<pre><code>first line
+second line
+</code></pre>
+<p>One more important thing to add here is that <code>print</code> and <code>println</code> can take any number of arguments (but at least one for <code>print</code>) by separating each argument with a comma (,). So, something like this is possible:</p>
+<pre><code class="language-py">io.println('Hello, ', 'world');
+</code></pre>
+<p>Finally, please remember that for using <code>print(ln)</code>, the <code>io</code> module must be loaded. We will talk about modules later, but from now on,
+it will be assumed that wherever <code>print(ln)</code> is used, the <code>io</code> module has been already imported.</p>
+<h2><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h2>
+<p>The <code>print</code> function is different from <code>println</code> in that it will not automatically add new line character at the end. Also, the <code>print</code> function requires at least one argument, whereas the <code>println</code> function requires no argument - in which case, it will simply enter a new line. For all other intents and purposes, the <code>print</code> and <code>println</code> functions are identical.</p>
+<p>Next, we are going to dive deeper in the language and understand Feral's variable system.</p>
+<h1><a class="header" href="#variables" id="variables">Variables</a></h1>
+<h2><a class="header" href="#what-are-variables" id="what-are-variables">What are Variables</a></h2>
+<p>Variables are pretty much aliases that the programmers make for using memory to allocate some data.
+Obviously, we do not want, for our sanity's sake, to use memory addresses directly for accessing our data.
+That is really complicated, hard to remember, and an absolute nightmare to maintain.
+So, we instead assign these memory locations, containing our data, to names which we can use in our programs as needed.</p>
+<p>Clearly, variables are a crucial part of a programming language, and hence, Feral has it as well.</p>
+<p>Creating a variable is really easy. For example, if we want an integer data, say <code>20</code>, to be stored in memory (and be accessible later),
+we can create a variable for that, say <code>a</code>, and use that when required. To do this, the variable can be created directly as:</p>
+<pre><code class="language-py">let a = 20;
+</code></pre>
+<p>Since Feral is a dynamically typed language, we need not mention the data type of the value that we want to store manually.
+We can then use it later on, say in <code>println</code>, to print the value of this variable. To do that, we can do the following:</p>
+<pre><code class="language-py">let io = import('std/io');
+let a = 20;
+println(a);
+</code></pre>
+<p>The will produce the output:</p>
+<pre><code class="language-py">20
+</code></pre>
+<h2><a class="header" href="#variable-reassignment" id="variable-reassignment">Variable Reassignment</a></h2>
+<p>We can also reassign the variables to different values later on. However, we need to remember that the <code>data type</code> of that variable cannot be changed throughout its lifetime. So, for example, if we create a variable <code>a</code> with value <code>20</code>, we can change it later to, say <code>40</code>, but we cannot change it to <code>'hi'</code>.
+If we do something like that, the interpreter will throw an error.</p>
+<p>For example, if we write this program:</p>
+<pre><code class="language-py">let a = 20;
+a = 'hi';
+</code></pre>
+<p>and execute it, the interpreter will throw the following error:</p>
+<pre><code>/root/tmp.fer 2[3]: error: assignment requires type of lhs and rhs to be same, found lhs: int, rhs: string; to redeclare a variable using another type, use the 'let' statement
+x = 'hi';
+  ^
+</code></pre>
+<p>Do note that in error message, Feral also provides us with a way to use same variable name for a different type: <code>variable redeclaration</code>.
+Using <code>variable redeclaration</code>, we can <em>recreate</em> a variable with an existing name.
+The old variable will cease to exist and the new variable will replace it.</p>
+<p>For example,</p>
+<pre><code class="language-py">let a = 20;
+let a = 'hi';
+</code></pre>
+<p>On the second line, a is redeclared as a <code>str</code> (with value 'hi'). Now you can no longer assign an integer to it.</p>
+<p>Although the language is dynamically typed, it does impose some restrictions on it.
+We will understand more about the types in Feral in the next chapter - <a href="./04-data-types.html">Data Types</a>.</p>
+<h2><a class="header" href="#variable-scopes" id="variable-scopes">Variable Scopes</a></h2>
+<p>The scope of a variable basically defines its lifetime - when it is created to when it is destroyed.
+Feral, like many other languages, uses braces to define chunks, or <strong>blocks</strong>, of code.
+Any variable that is created, has its lifetime bound to this block. It will not be accessible outside this block.</p>
+<p>For example:</p>
+<pre><code class="language-py">let a = 20;
+</code></pre>
+<p>is globally scoped - it is not inside any set of braces, which means that it can be globally used anywhere and once created,
+it will not be destroyed until the end of the program (it will be available exactly from the location where it is created).</p>
+<p>On the other hand, if we declare the same variable as:</p>
+<pre><code class="language-py">{
+	let a = 20;
+}
+</code></pre>
+<p>it will be accessible inside the set of braces (albeit after the creation - declaration of the variable), but not outside them.</p>
+<p>So, if we use the variable outside this set of braces (scope), say as follows:</p>
+<pre><code class="language-py">{
+	let a = 20;
+}
+io.println(a);
+</code></pre>
+<p>we will be greeted with the following error:</p>
+<pre><code>/root/tmp.fer 5[12]: error: variable 'a' does not exist
+io.println(a);
+           ^
+</code></pre>
+<p>Of course, if we create another variable named <code>a</code> with some data outside the scope, that would work just fine. So something like this works:</p>
+<pre><code class="language-py">{
+	let a = 20;
+}
+let a = 'hi';
+io.println(a);
+</code></pre>
+<p>which will produce the following output:</p>
+<pre><code>hi
+</code></pre>
+<p>Note that we can choose a different data type even when the variable name is same.
+The reason being that even though having same names, both of the declared variables are actually totally different.
+The first one, having data <code>20</code>, no longer exists after the scope, therefore, the second one, having data <code>hi</code>,
+is a new variable declaration.</p>
+<h2><a class="header" href="#variable-naming" id="variable-naming">Variable Naming</a></h2>
+<p>One last important thing about variables is their naming. Feral defines specific rules based on which you can name variables,
+quite similar to most other languages. These rules are that variable names:</p>
+<ol>
+<li>Must begin with an alphabet (irrelevant of the case) or underscore</li>
+<li>Can contain numbers anywhere except the first character</li>
+<li>Cannot contain any symbol other than alphabets, numbers, and underscores.</li>
+</ol>
+<p>Well, that is basically how variables, their reassignment, and their scopes, work. Not much to learn or understand and pretty easy - which is the goal!</p>
+<p>Next up, we'll understand the concept of <code>data types</code> and see some of the fundamental data types in Feral.</p>
+<h1><a class="header" href="#data-types" id="data-types">Data Types</a></h1>
+<p>The data we use and store always has some type. The computer does not really need it, but we do because we don't want to work in binary.
+Data types are abstractions over binary sequences which define what kind of data will a variable using a said data type will contain,
+and how will that data be represented in memory.</p>
+<p>If you have prior experience in programming, you may know very well about this. Data types are ubiquitous across programming and are virtually essential for writing software.
+Some common data types are:</p>
+<pre><code>char (character)
+int (integer)
+float (floating point)
+bool (boolean)
+string (sequence of characters)
+</code></pre>
+<p>In Feral, the <code>char</code> data type does not exist as even a single character, in Feral, is a string.
+Therefore, all these data types except <code>char</code> are fundamental types in Feral.</p>
+<p>However, Feral is a <code>dynamically typed</code> language. This means that when we create variables, we do not provide types for the variable.
+Instead, these are deduced by the interpreter at run time based on the value that we provide to the variable. There are some pros and cons
+to this method. The biggest pro being that writing code is quicker, while the biggest con is that the code may be difficult to understand
+at a glance.</p>
+<p>For example, if we write something like:</p>
+<pre><code class="language-py">let s = 'hi';
+let i = 5;
+</code></pre>
+<p>Then, <code>s</code> is a variable which is deduced by the interpreter to be of type <code>string</code> because the expression <code>hi</code> is a string,
+whereas <code>i</code> is a variable that is deduced by the interpreter to be of type <code>int</code> because <code>5</code> is an integer.</p>
+<p>There are also complex data types in Feral which are created by grouping of fundamental types.
+We will understand that in later chapters.</p>
+<p>For now, let's understand a bit in-depth about the fundamental data types in Feral.</p>
+<h2><a class="header" href="#fundamental-types" id="fundamental-types">Fundamental Types</a></h2>
+<p>These data types are always available for the programmer and are easily deduced by the interpreter based on values.
+Without these types, a lot of things would not be possible in Feral. For example, if the <code>int</code> type was absent,
+you would not be able to write any code requiring calculations. Booleans are exceptions to this as you can imitate
+the booleans using integers (say, integer <code>1</code> for <code>true</code>, integer <code>0</code> for <code>false</code>).</p>
+<p>There are some important things to understand about these data types, so let's do that first.</p>
+<h3><a class="header" href="#integers" id="integers">Integers</a></h3>
+<p>Integers represent all the negative and positive numbers in Feral - all the numbers without decimal that is.
+Theoretically, it can contain any number in the range: <code>(-∞,∞)</code>.</p>
+<p>Note that unlike many (especially compiled) languages, numbers are not limited to 32, 64, or even 128 bit.
+So yes, you can have as big a number as you like, so long as it fits your system's memory.</p>
+<p>For example,</p>
+<pre><code class="language-py">let num = 13721736912389172367234538762354786253478652374587235648923749872394623864;
+let negative = -12378126387512836512678358761253871625365412578631263816287357125387123123768162;
+</code></pre>
+<p>are both valid integer variables.</p>
+<h3><a class="header" href="#floats" id="floats">Floats</a></h3>
+<p>Floating point numbers are the decimal numbers - any number which is an imperfect fraction.
+These are useful when precise mathematical calculations are required, as integers won't provide decimal precision.
+As with integers, floating point values can also be arbitrarily long with a very high precision.
+For example,</p>
+<pre><code class="language-py">let flt = 13721736912389172367234538.762354786253478652374587235648923749872394623864;
+let negative = -123781263875128365.12678358761253871625365412578631263816287357125387123123768162;
+</code></pre>
+<p>Do note that to classify a number as floating point, the use of decimal point (.) to signify decimal is a <strong>must</strong>,
+even if the number does not actually have anything after the decimal point (.), in which case,
+we can simply have a <code>zero (0)</code> after that.
+For example,</p>
+<pre><code class="language-py">let flt = 12.0;
+</code></pre>
+<h3><a class="header" href="#bools" id="bools">Bools</a></h3>
+<p>Booleans are the <code>true</code> and <code>false</code> values in Feral. These are used when you want to know something in a yes or no fashion.
+The <code>true</code> and <code>false</code> are special (constant) variables in Feral which signify their respective boolean values.
+These two special variables cannot be reassigned and are always available globally throughout the program's life.</p>
+<p>For example,</p>
+<pre><code class="language-py">let t = true;
+let f = false;
+</code></pre>
+<h3><a class="header" href="#strings" id="strings">Strings</a></h3>
+<p>Strings are, essentially, sequences of characters that are, well, just that! From a single character on your keyboard,
+to even entire articles written by you, can be considered and contained in strings. These strings, in Feral, are often referred
+to as constant strings (const strings) when they are hardcoded in your code. Strings are also how input is received in Feral,
+which will be covered in the next chapter of the book. There are 3 ways to write constant strings in Feral:</p>
+<ol>
+<li>Enclosing in between single quotes ('&lt;some string&gt;')</li>
+<li>Enclosing in between double quotes (&quot;&lt;some string&gt;&quot;)</li>
+<li>Enclosing in between back ticks (`&lt;some string&gt;`)</li>
+</ol>
+<p>All of them are identical and can span multiple lines, but the variety often helps in nested use cases, discussed later in this chapter.
+For example,</p>
+<pre><code class="language-pyuby">let s1 = 'string in &quot;single&quot; quotes';
+let s2 = &quot;string in 'double' quotes&quot;;
+let s3 = `string in between back ticks with 'single' and &quot;double&quot; quotes inside`;
+</code></pre>
+<p>An important thing to consider is that Feral does interpret some escape sequences. They are:</p>
+<pre><code>\a - Alert bell
+\b - Backspace
+\f - Formfeed page break
+\n - New line
+\r - Carriage return
+\t - Tab (horizontal)
+\v - Tab (vertical)
+\\ - Simple backslash
+\&quot; - Simple double quote
+\' - Simple single quote
+</code></pre>
+<p>We saw these being used in our hello world program for printing newline with the <code>print</code> function.</p>
+<p>The single, double, and back quoted constant strings, although identical, do exist for a reason - if we enclose a string inside double quotes,
+we can use single quotes inside them freely and vice versa. And if we enclose a string in backticks,
+we can use single as well as double quotes inside it. If, say, only single quoted constant strings existed,
+we would have to continually escape the single quotes inside it to avoid them being considered end of string quotes.
+For example:</p>
+<pre><code class="language-py"># here, 'this' will be shown in quotes
+io.println('this is a string and \'this\' is literally quoted');
+# if we use double quotes, we don't have to use escape sequences
+io.println(&quot;this is a string and 'this' is literally quoted&quot;);
+# same thing as above, but quotes are swapped
+io.println('this is a string and &quot;this&quot; is literally quoted');
+</code></pre>
+<p>As we can see, it can be quite useful to have this style. Also, if we want to use both types of quotes as literals, we could enclose them inside
+the back ticks:</p>
+<pre><code class="language-go">io.println(`this is 'a' quoted &quot;string&quot;`);
+</code></pre>
+<h1><a class="header" href="#conclusion-1" id="conclusion-1">Conclusion</a></h1>
+<p>That should be more than sufficient information about strings at this point. We will learn more as we need.
+For now, it's time for the next chapter in which we will learn about taking input from the user!</p>
+<h1><a class="header" href="#input" id="input">Input</a></h1>
+<p>We are making programs for the user and unless we are interested in writing scripts for absolute and utter automation,
+we will have to take some sort of input from the user. And for this, we have one core function for taking user input.</p>
+<h2><a class="header" href="#scan-function" id="scan-function">scan Function</a></h2>
+<p>Feral has an <code>io</code> function <code>scan()</code> which allows the programmer to take user input. It can optionally take in a prompt string
+and returns the input entered by the user as a string. The programmer has complete control to do whatever they want with this input string.</p>
+<p>For example,</p>
+<pre><code class="language-py"># taking simple input in a variable
+let var1 = io.scan();
+# taking input after a prompt
+var2 = io.scan('Enter some data: ');
+</code></pre>
+<p>In the second case, the user will first be greeted by <code>Enter some data: </code> and they can provide input after that.
+Similar to the output from <code>print</code> function, this prompt will not append a newline character at the end automatically.
+If we want a newline character at the end, we will have to manually add that like so:</p>
+<pre><code class="language-py">let var = io.scan('Enter some data in next line:\n');
+</code></pre>
+<p>Let's understand this better using a very simple program extending our <code>Hello world</code> program.</p>
+<p>This time, we want to ask the user their name, and we will print <code>Hello, &lt;their name&gt;</code>. Basically, we will be doing three things:</p>
+<ol>
+<li>Giving prompt and taking input</li>
+<li>Storing the input in a variable</li>
+<li>Displaying our message</li>
+</ol>
+<p>Ideally, you should try to making such a program by yourself first, but for this guide, here is the solution:</p>
+<pre><code class="language-py">let name = io.scan('Enter your name: ');
+io.println('Hello, ', name);
+</code></pre>
+<p>That's it! Easy right?!</p>
+<p>There is one more input function <code>scaneof</code>. The only difference between <code>scan</code> and <code>scaneof</code> is that <code>scaneof</code> reads till it finds the <code>EOF</code> character in the input. Therefore, <code>scaneof</code> can span multiple lines, unlike the <code>scan</code> function which reads only a single line at a time.</p>
+<p>Well, there isn't anything else to learn about input for now. The <code>scan</code> function will most likely be extended later on to perhaps provide
+more fine grain control over taking input.</p>
+<p>This guide has used the term <code>function</code> a lot of times. Next up, it is time to understand what exactly they are and how to work with them
+in Feral.</p>
+<h1><a class="header" href="#functions" id="functions">Functions</a></h1>
+<h2><a class="header" href="#what-are-functions" id="what-are-functions">What are Functions</a></h2>
+<p>In simple words, functions are groups of statements/instructions that are combined to perform some tasks, and can be used repeatedly. We can say, functions are made to perform an often repetitive set of procedures, multiple times, without having to repeat the procedures.</p>
+<p>When we create a function with its group of statements, it is called <code>function definition</code>. The group of statements is called
+<code>function body</code>. And, when we use the function, it is called a <code>function call</code>.</p>
+<p>We may need to provide functions with some additional data, or retrieve some data from it. For that, we use <code>function arguments</code>
+and <code>function return values</code> respectively.</p>
+<p>Now, let's move on to how these functions are implemented in Feral.</p>
+<h2><a class="header" href="#functions-in-feral" id="functions-in-feral">Functions in Feral</a></h2>
+<p>Feral allows functions to be written in two different modes, each with two different styles, totalling four total varities for writing functions.
+They are:</p>
+<ol>
+<li>As C++ functions - Since Feral interpreter is written in C++ programming language, its functions can be written in it too, allowing you to bind C++ and Feral, essentially, enabling use of the plethora of C++ libraries.</li>
+<li>As Feral functions - Feral allows you to write functions in the Feral language itself, which is what you will be doing for the most part and what this guide will elaborate on.</li>
+</ol>
+<p>Both of these types have 2 styles each - as plain global functions, and as <code>pseudo member</code> functions. We will understand this in more detail but let's first grasp the concepts of simple (plain) functions.</p>
+<h3><a class="header" href="#our-first-function" id="our-first-function">Our First Function!</a></h3>
+<p>In Feral, we define functions using the keyword <code>fn</code>. This marks the beginning of a function definition and we then describe the function.
+Let's work on this using our dear old <code>Hello world</code> example.</p>
+<p>Last time, we were able to ask user to enter their name, store it in a variable, and display our hello message to the user in the <code>Hello, &lt;user&gt;</code> format.
+This time, we will create a function named <code>hello</code> to which we will pass the name of the user as an argument and that function will print
+the hello message for us.</p>
+<p>So, here's the code for that.</p>
+<pre><code class="language-py">let io = import('std/io');
+# function definition
+let hello = fn(name) {
+	io.println('Hello, ', name);
+};
+
+let name = io.scan('Enter your name: ');
+# function call
+hello(name);
+</code></pre>
+<p>Do note that variable names can be anything you like. The names given here are <strong>not</strong> set in stone.
+But yes, congratulations on making your first function in Feral! Now, to understand what we have written.</p>
+<p>Function definitions start with the keyword <code>fn</code>. Then comes the argument names for the function within parenthesis - multiple arguments separated by commas and empty parentheses for no argument, and then we have our function body within curly braces.</p>
+<p>To use a function, we simply call it by using the function name with parentheses and the actual arguments (our data) within the parentheses.
+Again, for no arguments, empty parentheses are required.</p>
+<p>Since functions are expressions in Feral, they can be stored in variables too! This is how we assigned an <code>anonymous function</code> - a nameless function, to the variable <code>hello</code> in this case. Hence, just like any other variable, we can pass this around to functions, as well make a new variable out of it, like so.</p>
+<pre><code class="language-py">let func1 = fn(a, b) {
+	return a + b;
+};
+
+let func2 = func1; # now func2 is also the same function as func1
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
