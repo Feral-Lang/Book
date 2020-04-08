@@ -57,3 +57,5 @@ let func1 = fn(a, b) {
 
 let func2 = func1; # now func2 is also the same function as func1
 ```
+
+Feral also has the concept of `type bound` functions which are used similar to member functions. But we'll discuss about them in a later chapter. For now, time to move on to the next topic - Conditionals!

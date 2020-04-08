@@ -7,3 +7,5 @@
 - [Data Types](./04-data-types.md)
 - [Input](./05-input.md)
 - [Functions](./06-functions.md)
+- [Conditionals](./07-conditionals.md)
+- [Loops](./08-loops.md)
