@@ -217,7 +217,7 @@ io.println('hello, world');
 </code></pre>
 <p>Save the code in a file named, say <code>hello.fer</code>, and run it using the <code>feral</code> binary which we built in the <a href="./01-install.html">installation</a> document.
 Assuming that no <code>PREFIX_DIR</code> was set, the binary would be created in the <code>build/bin/</code> directory of the cloned repostory. Hence, the command to run our script would be:</p>
-<pre><code class="language-bash">./build/bin/fer hello.fer
+<pre><code class="language-bash">./build/bin/feral hello.fer
 </code></pre>
 <p>This will output <code>hello world</code> on the display.</p>
 <p>Congratulations! You have successfully written your first program in Feral!</p>
@@ -456,7 +456,7 @@ For now, it's time for the next chapter in which we will learn about taking inpu
 <h1><a class="header" href="#input" id="input">Input</a></h1>
 <p>We are making programs for the user and unless we are interested in writing scripts for absolute and utter automation,
 we will have to take some sort of input from the user. And for this, we have one core function for taking user input.</p>
-<h2><a class="header" href="#scan-function" id="scan-function">scan Function</a></h2>
+<h2><a class="header" href="#the-scan-function" id="the-scan-function">The <code>scan</code> Function</a></h2>
 <p>Feral has an <code>io</code> function <code>scan()</code> which allows the programmer to take user input. It can optionally take in a prompt string
 and returns the input entered by the user as a string. The programmer has complete control to do whatever they want with this input string.</p>
 <p>For example,</p>
