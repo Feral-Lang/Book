@@ -3,7 +3,7 @@
 We are making programs for the user and unless we are interested in writing scripts for absolute and utter automation,
 we will have to take some sort of input from the user. And for this, we have one core function for taking user input.
 
-## scan Function
+## The `scan` Function
 
 Feral has an `io` function `scan()` which allows the programmer to take user input. It can optionally take in a prompt string
 and returns the input entered by the user as a string. The programmer has complete control to do whatever they want with this input string.

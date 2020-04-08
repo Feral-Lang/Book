@@ -9,7 +9,7 @@ io.println('hello, world');
 Save the code in a file named, say `hello.fer`, and run it using the `feral` binary which we built in the [installation](./01-install.md) document.
 Assuming that no `PREFIX_DIR` was set, the binary would be created in the `build/bin/` directory of the cloned repostory. Hence, the command to run our script would be:
 ```bash
-./build/bin/fer hello.fer
+./build/bin/feral hello.fer
 ```
 
 This will output `hello world` on the display.
