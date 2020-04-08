@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -532,6 +532,36 @@ Again, for no arguments, empty parentheses are required.</p>
 
 let func2 = func1; # now func2 is also the same function as func1
 </code></pre>
+<p>Feral also has the concept of <code>type bound</code> functions which are used similar to member functions. But we'll discuss about them in a later chapter. For now, time to move on to the next topic - Conditionals!</p>
+<h1><a class="header" href="#conditionals" id="conditionals">Conditionals</a></h1>
+<p>Conditionals are the decision making constructs in programming - and in Feral. In essence, if we want some actions - statements to be executed based on some prerequisites or criteria, we use conditionals.</p>
+<p>In Feral, like most languages, conditional construct exists in the format:</p>
+<pre><code class="language-py">if &lt;some expression&gt; {
+	# do something;
+} elif &lt;perhaps, some other expression&gt; {
+	# do some other thing;
+} else {
+	# oh well, none of the above worked, so let's just do this
+}
+</code></pre>
+<p>Do note that the <code>elif</code> and <code>else</code> portions are not mandatory. But the order - first <code>if</code>, then <code>elif</code>, then <code>else</code> is absolute. Also, a conditional can have any number of <code>elif</code>s.</p>
+<p><code>if</code> states the starting of a conditional. Right after <code>if</code>, Feral expects an expression (a set of calculations &amp; function calls that return some value) that evaluates to a boolean value. The boolean, if <code>true</code> will cause the block of <code>if</code>, which is right after the expression - beginning with an opening brace, to be executed. If the boolean, however, is <code>false</code>, the block is not executed. Instead, if there is <code>elif</code>, its expression will be checked and this process will continue. If none of the conditions work, and there is an <code>else</code> block, that will be executed.</p>
+<p>For example,</p>
+<pre><code class="language-py">let io = import('std/io');
+
+let a = 2;
+if a == 1 {
+	io.println('one');
+} elif a == 2 {
+	io.println('two');
+} else {
+	io.println('i dunno');
+}
+</code></pre>
+<p>In this case, the <code>elif</code> block will be executed since <code>a == 2</code> will evaluate to <code>true</code>.</p>
+<p>That's it for conditionals actually. Next up, we'll be learning about the loops (and its types!).</p>
+<h1><a class="header" href="#loops" id="loops">Loops</a></h1>
+<p>Loops are blocks of code that run again and again continuously, often based on some condition.</p>
 
                     </main>
 
