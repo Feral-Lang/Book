@@ -13,7 +13,7 @@ For example,
 # taking simple input in a variable
 let var1 = io.scan();
 # taking input after a prompt
-var2 = io.scan('Enter some data: ');
+let var2 = io.scan('Enter some data: ');
 ```
 In the second case, the user will first be greeted by `Enter some data: ` and they can provide input after that.
 Similar to the output from `print` function, this prompt will not append a newline character at the end automatically.
