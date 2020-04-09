@@ -32,4 +32,4 @@ if a == 1 {
 ```
 In this case, the `elif` block will be executed since `a == 2` will evaluate to `true`.
 
-That's it for conditionals actually. Next up, we'll be learning about the loops (and its types!).
+That's it for conditionals actually. Next up, we'll be learning about the various `loop` constructs in Feral.
