@@ -9,7 +9,7 @@
 - [Functions](./06-functions.md)
 - [Conditionals](./07-conditionals.md)
 - [Loops](./08-loops.md)
-- [Standard library](./12-standard-library.md)
+- [Standard Library](./12-standard-library.md)
   - [IO](./std/1-std-io.md)
   - [Structures & Enums](./std/2-std-structs-enums.md)
   - [Strings](./std/3-std-strings.md)

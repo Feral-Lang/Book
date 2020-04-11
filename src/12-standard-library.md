@@ -1,4 +1,4 @@
-# Standard library
+# Standard Library
 
 - [IO](./std/1-std-io.md)
 - [Structures & Enums](./std/2-std-structs-enums.md)
