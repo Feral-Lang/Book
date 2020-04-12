@@ -26,6 +26,8 @@ import('std/str');
 - [trim](#trim)
 - [split](#split)
 - [c_to_i](#c_to_i)
+
+## `int` Member Functions
 - [i_to_c](#i_to_c)
 
 ### len
@@ -73,7 +75,8 @@ Returns the first character of the string, or `nil` if the string is empty
 Example:
 ```
 let io = import('std/io');
-io.println('hello'.push(' world'));
+io.println('hello'.front());
+io.println(''.front());
 
 ```
 
@@ -85,15 +88,15 @@ h
 
 ### back
 ```
-front() -> string
+back() -> string
 ```
 Returns the last character of the string, or `nil` if the string is empty
 
 Example:
 ```
 let io = import('std/io');
-io.println('hello'.front());
-io.println(''.empty());
+io.println('hello'.back());
+io.println(''.back());
 ```
 
 Gives the output:
