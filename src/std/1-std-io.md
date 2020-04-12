@@ -27,9 +27,9 @@ let io = import('std/io');
 
 ### print
 ```
-print(args...) -> void
+print(args...) -> nil
 ```
-Print all given `args` to the standard output without adding a new line after the last one
+Prints all given `args` to the standard output without adding a new line after the last one
 
 Example:
 ```
@@ -45,9 +45,9 @@ My name is John. I am 21.
 
 ### println
 ```
-println(args...) -> void
+println(args...) -> nil
 ```
-Print all given `args` to the standard output and add a new line after the last one
+Prints all given `args` to the standard output and add a new line after the last one
 
 Example:
 ```
@@ -65,9 +65,9 @@ I am 21.
 
 ### fprint
 ```
-fprint(file: file, args...) -> void
+fprint(file: file, args...) -> nil
 ```
-Write all given `args` to `file` without adding a new line after the last one
+Writes all given `args` to `file` without adding a new line after the last one
 
 Example:
 ```
@@ -85,9 +85,9 @@ My name is John. I am 21.
 
 ### fprintln
 ```
-fprintln(file: file, args...) -> void
+fprintln(file: file, args...) -> nil
 ```
-Write all given `args` to `file` and add a new line after the last one
+Writes all given `args` to `file` and add a new line after the last one
 
 Example:
 ```
@@ -106,9 +106,9 @@ I am 21.
 
 ### cprint
 ```
-print(args...) -> void
+print(args...) -> nil
 ```
-Print all given `args` to the standard output without adding a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprint` call and will remain active until another one comes in.
+Prints all given `args` to the standard output without adding a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprint` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -137,9 +137,9 @@ The possible color codes are the following:
 
 ### cprintln
 ```
-cprintln(args...) -> void
+cprintln(args...) -> nil
 ```
-Print all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
+Prints all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -153,9 +153,9 @@ For the list of available color codes, please refer to [cprint](#cprint)
 
 ### cdprint
 ```
-cdprint(args...) -> void
+cdprint(args...) -> nil
 ```
-Print all given `args` to the error output without adding a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprint` call and will remain active until another one comes in.
+Prints all given `args` to the error output without adding a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprint` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -169,9 +169,9 @@ For the list of available color codes, please refer to [cprint](#cprint)
 
 ### cdprintln
 ```
-cdprintln(args...) -> void
+cdprintln(args...) -> nil
 ```
-Print all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
+Prints all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -187,7 +187,7 @@ For the list of available color codes, please refer to [cprint](#cprint)
 ```
 scan(prompt: string = '') -> string
 ```
-Read a single line of text from the standard input. 
+Reads a single line of text from the standard input. 
 
 An optional `prompt` parameter can be passed to write the given string before reading the standard input.
 
@@ -207,7 +207,7 @@ You are 21 years old
 ```
 scaneof(prompt: string = '') -> string
 ```
-Read text from the standard input until *EOF* is found. Even id *EOF* can be emitted by a user (usually *CTRL-D* on UNIX), `scaneof` is more likely to be useful when a **Feral** script takes as an input the output of another program.
+Reads text from the standard input until *EOF* is found. Even id *EOF* can be emitted by a user (usually *CTRL-D* on UNIX), `scaneof` is more likely to be useful when a **Feral** script takes as an input the output of another program.
 
 An optional `prompt` parameter can be passed to write the given string before reading the standard input.
 
@@ -228,9 +228,9 @@ My name is John Doe,I am 21 years old,I live on Mars
 
 ### fflush
 ```
-fflush(file: file) -> void
+fflush(file: file) -> nil
 ```
-Force all unwritten data to be written to the `file`.
+Forces all unwritten data to be written to the `file`.
 
 `fflush` is useful because writes to `stdout`, `stderr` or any typical files are usually buffered and their content may not immediately be updated.
 
