@@ -88,7 +88,7 @@ h
 
 ### back
 ```
-back() -> string
+string.back() -> string
 ```
 Returns the last character of the string, or `nil` if the string is empty
 
@@ -107,7 +107,7 @@ o
 
 ### push
 ```
-push(str: string) -> string
+string.push(str: string) -> string
 ```
 Appends `str` to the string and returns the modified string
 
