@@ -226,12 +226,15 @@ Returns the character at index `idx`, or `nil` if out of range
 Example:
 ```
 let io = import('std/io');
-io.println('hello'.at(0));
+let hello = 'hello';
+io.println(hello.at(0));
+io.println(hello.at(5));
 ```
 
 Gives the output:
 ```
 h
+(nil)
 ```
 ### operator []
 ```
@@ -242,12 +245,15 @@ Returns the character at index `idx`, or `nil` if out of range
 Example:
 ```
 let io = import('std/io');
-io.println('hello'[0]);
+let hello = 'hello';
+io.println(hello.at(0));
+io.println(hello.at(5));
 ```
 
 Gives the output:
 ```
 h
+(nil)
 ```
 
 ### trim

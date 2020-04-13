@@ -11,7 +11,7 @@
 - [Loops](./08-loops.md)
 - [Standard Library](./12-standard-library.md)
   - [IO](./std/1-std-io.md)
-  - [Structures & Enums](./std/2-std-structs-enums.md)
+  - [Lang](./std/2-std-lang.md)
   - [Strings](./std/3-std-strings.md)
   - [Vectors](./std/4-std-vectors.md)
   - [Maps](./std/5-std-maps.md)
