@@ -26,8 +26,8 @@ vec = import('std/vec');
 - [set](#set)
 - [at](#at)
 - [operator []](#operator-)
-- [each](#each)
 - [slice](#slice)
+- [each](#each)
 - [next](#next)
 
 ### new
@@ -254,6 +254,7 @@ Gives the output:
 2
 (nil)
 ```
+
 ### operator []
 ```
 vector[idx: int] -> value
