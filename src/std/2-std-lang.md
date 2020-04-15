@@ -5,8 +5,11 @@ The **lang** module offers a way to create user-defined structures and enumerati
 A structure can pack together variables and functions, which allow object-oriented programming.
 
 An enumeration is a set of names bounds to constant numerical values.
+
+All the given examples assume the following imports:
 ```
 let lang = import('std/lang');
+let io = import('std/io');
 ```
 
 ## Functions
@@ -23,7 +26,6 @@ Adding member functions to a type is done with the `let func in type = fn(args) 
 
 Example:
 ```
-let io = import('std/io');
 let player_t = lang.struct(name = "John", class = "Mage", health = 100, attack = 10);
 
 # str is used by print functions to print the content of an object

@@ -4,9 +4,10 @@ The **str** module defines the `string` type and all string manipulation related
 
 A `string` is a sequence of characters. There is no character type in **Feral** and so are represented are one character strings.
 
-All the given examples assume that the **str** module was imported using:
+All the given examples assume the following imports:
 ```
 import('std/str');
+let io = import('std/io');
 ```
 
 ## `string` Member Functions
@@ -38,7 +39,6 @@ Returns the number of characters
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello'.len());
 ```
 
@@ -55,7 +55,6 @@ Checks whether the string is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello'.empty());
 io.println(''.empty());
 ```
@@ -74,10 +73,8 @@ Returns the first character of the string, or `nil` if the string is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello'.front());
 io.println(''.front());
-
 ```
 
 Gives the output:
@@ -94,7 +91,6 @@ Returns the last character of the string, or `nil` if the string is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello'.back());
 io.println(''.back());
 ```
@@ -113,7 +109,6 @@ Appends `str` to the string and returns the modified string
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'hello';
 hello.push(', ');
 io.println(hello.push('world!'));
@@ -132,7 +127,6 @@ Removes the last character and returns the modified string
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'hello';
 hello.pop();
 io.println(hello.pop());
@@ -151,7 +145,6 @@ Inserts the `str` string at index `idx` and returns the modified string
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'heo';
 hello.insert(2, 'll');
 io.println(hello);
@@ -170,7 +163,6 @@ Removes one character at index `idx` and returns the modified string
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'helloo';
 hello.erase(4);
 io.println(hello);
@@ -189,7 +181,6 @@ Returns the index of the last character. Equivalent to `len() - 1`
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello'.lastidx());
 ```
 
@@ -206,7 +197,6 @@ Replaces the character at index `idx` with `char` and returns the modified strin
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'hello_';
 hello.set(5, '!');
 io.println(hello);
@@ -225,7 +215,6 @@ Returns the character at index `idx`, or `nil` if out of range
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'hello';
 io.println(hello.at(0));
 io.println(hello.at(5));
@@ -244,7 +233,6 @@ Returns the character at index `idx`, or `nil` if out of range
 
 Example:
 ```
-let io = import('std/io');
 let hello = 'hello';
 io.println(hello.at(0));
 io.println(hello.at(5));
@@ -264,7 +252,6 @@ Removes all whitespace characters at the beginning and at the end of the string 
 
 Example:
 ```
-let io = import('std/io');
 io.println('_', '   hello   '.trim(), '_');
 ```
 
@@ -281,7 +268,6 @@ Splits the string using `delim` as a single character delimiter and returns a ve
 
 Example:
 ```
-let io = import('std/io');
 io.println('hello;world'.split(';'));
 ```
 
@@ -298,7 +284,6 @@ Converts the first character to its ASCII integer representation. Returns 0 if t
 
 Example:
 ```
-let io = import('std/io');
 io.println('0'.c_to_i());
 ```
 
@@ -315,7 +300,6 @@ Converts an integer from its ASCII integer representation to a string
 
 Example:
 ```
-let io = import('std/io');
 io.println(48.i_to_c());
 ```
 

@@ -4,9 +4,10 @@ The **map** module defines the `map` type and all the vector manipulation relate
 
 A `map` is an associative container that can store heterogeneous types.
 
-All the given examples assume that the **map** module was imported using:
+All the given examples assume the following imports:
 ```
-map = import('std/map');
+let map = import('std/map');
+let io = import('std/io');
 ```
 
 ## Functions
@@ -30,7 +31,6 @@ Creates a new map using the given key/value pairs. The keys must be convertible 
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 io.println(m);
 ```
@@ -50,7 +50,6 @@ Returns the number of key/value pairs inside the map
 
 Example:
 ```
-let io = import('std/io');
 io.println(map.new(0, "Zero", 1, "One", "Answer?", 42).len());
 ```
 
@@ -67,7 +66,6 @@ Inserts the `key`/`value` pair and returns the modified map
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero");
 m.insert(1, "One");
 io.println(m.insert("Answer?", 42));
@@ -86,7 +84,6 @@ Removes the `key` and its associated value and returns the modified map
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 m.erase(1);
 io.println(m.erase("Answer?"));
@@ -105,7 +102,6 @@ Returns the value associated with `key`, or `nil` if it doesn't exist
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 io.println(m.get("Answer?"));
 io.println(m.get("Oops"));
@@ -125,7 +121,6 @@ Returns the value associated with `key`, or `nil` if it doesn't exist
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 io.println(m["Answer?"]);
 io.println(m["Oops"]);
@@ -145,7 +140,6 @@ Returns an iterator pointing to the first key/value pair, allowing easy map iter
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 for elem in m.each() {
     io.println(elem.0, ": ", elem.1);
@@ -167,7 +161,6 @@ Returns the key/value pair pointed by the iterator, or `nil` if out of range, an
 
 Example:
 ```
-let io = import('std/io');
 let m = map.new(0, "Zero", 1, "One", "Answer?", 42);
 let iter = m.each();
 for i in range(m.len()) {

@@ -4,9 +4,10 @@ The **vec** module defines the `vector` type and all the vector manipulation rel
 
 A `vector` is a sequence container that can store heterogeneous types.
 
-All the given examples assume that the **vec** module was imported using:
+All the given examples assume the following imports:
 ```
-vec = import('std/vec');
+let vec = import('std/vec');
+let io = import('std/io');
 ```
 
 ## Functions
@@ -39,7 +40,6 @@ Creates a new vector using the given elements
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(12, 'Hello', 3.14);
 io.println(v);
 ```
@@ -57,7 +57,6 @@ Returns the number of elements inside the vector
 
 Example:
 ```
-let io = import('std/io');
 io.println(vec.new(0, 1, 2).len());
 ```
 
@@ -74,7 +73,6 @@ Checks whether the vector is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println(vec.new(0, 1, 2).empty());
 io.println(vec.new().empty());
 ```
@@ -93,7 +91,6 @@ Returns the first element of the vector, or `nil` if the vector is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println(vec.new(0, 1, 2).front());
 io.println(vec.new().front());
 ```
@@ -112,7 +109,6 @@ Returns the last element of the vector, or `nil` if the vector is empty
 
 Example:
 ```
-let io = import('std/io');
 io.println(vec.new(0, 1, 2).back());
 io.println(vec.new().back());
 ```
@@ -131,7 +127,6 @@ Appends `elem` to the vector and returns the modified vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0);
 v.push(1);
 io.println(v.push(2));
@@ -150,7 +145,6 @@ Removes the last element and returns the modified vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2);
 v.pop();
 io.println(v.pop());
@@ -169,7 +163,6 @@ Inserts the `elem` element at index `idx` and returns the modified vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 2);
 v.insert(2, 3);
 io.println(v.insert(1, 1));
@@ -188,7 +181,6 @@ Removes one element at index `idx` and returns the modified vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 9, 12, 2);
 v.erase(3);
 io.println(v.erase(2));
@@ -224,7 +216,6 @@ Replaces the element at index `idx` with `elem` and returns the modified vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 0, 0);
 v.set(0, 2);
 io.println(v.set(1, 1));
@@ -243,7 +234,6 @@ Returns the element at index `idx`, or `nil` if out of range
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2);
 io.println(v.at(2));
 io.println(v.at(3));
@@ -263,7 +253,6 @@ Returns the element at index `idx`, or `nil` if out of range
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2);
 io.println(v[2]);
 io.println(v[3]);
@@ -283,7 +272,6 @@ Extracts the elements from `start` to `end - 1` and returns them in a new vector
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2, 3);
 io.println(v.slice(1));
 io.println(v.slice(1, 3));
@@ -303,7 +291,6 @@ Returns an iterator pointing to the first element, allowing easy vector iteratio
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2);
 for elem in v.each() {
     io.println(elem);
@@ -325,7 +312,6 @@ Returns the value pointed by the iterator, or `nil` if out of range, and then ad
 
 Example:
 ```
-let io = import('std/io');
 let v = vec.new(0, 1, 2, 3);
 let iter = v.each();
 for i in range(v.len() + 1) {
