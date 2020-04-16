@@ -2,7 +2,7 @@
 
 The **fs** module allow to access and manipulate the file system
 
-All the given examples assume that the **fs** module was imported using:
+All the given examples assume the following imports:
 ```
 fs = import('std/fs');
 let io = import('std/io');
@@ -53,14 +53,14 @@ fs.open(path: string, mode: string = 'r') -> file
 ```
 Opens the given file `path` using the (optional) `mode`. `mode` can be any of the following:
 
-| Mode | Description                   |
-|------|-------------------------------|
-|  r   |  Open a file for reading      |
-|  w   |  Create a file for writing    |
-|  a   |  Append to a file             |
-|  r+  |  Open a file for read/write   |
-|  w+  |  Create a file for read/write |
-|  a+  |  Open a file for read/write   |
+| Mode | Description                  |
+| ---- | ---------------------------- |
+| r    | Open a file for reading      |
+| w    | Create a file for writing    |
+| a    | Append to a file             |
+| r+   | Open a file for read/write   |
+| w+   | Create a file for read/write |
+| a+   | Open a file for read/write   |
 
 Note: Appending 'x' to either 'w' or 'w+' will cause the function to fail if the file already exists. This may prevents overwriting existing files.
 
@@ -75,11 +75,11 @@ fs.walkdir(dir: string, mode: int = WALK_RECURSE, regex: string = '(.*)') -> vec
 ```
 Returns a vector of all file paths in `path` using the (optional) `mode` and `regex`. `mode` can be any combination of the following:
 
-| Mode             | Description               |
-|------------------|---------------------------|
-|  fs.WALK_FILES   |  List only files          |
-|  fs.WALK_DIRS    |  List only directories    |
-|  fs.WALK_RECURSE |  Search recursively       |
+| Mode            | Description           |
+| --------------- | --------------------- |
+| fs.WALK_FILES   | List only files       |
+| fs.WALK_DIRS    | List only directories |
+| fs.WALK_RECURSE | Search recursively    |
 
 The default `regex` matches all file names.
 
@@ -160,11 +160,11 @@ file.seek(offset: int, origin: int) -> int
 ```
 Moves the file position indicator to the given `offset` starting at `origin`. `origin` can be any of the following:
 
-| Origin     | Description               |
-|------------|---------------------------|
-|  SEEK_SET  |  Beginning of the file    |
-|  SEEK_CUR  |  Current file position    |
-|  SEEK_END  |  End of the file          |
+| Origin   | Description           |
+| -------- | --------------------- |
+| SEEK_SET | Beginning of the file |
+| SEEK_CUR | Current file position |
+| SEEK_END | End of the file       |
 
 Example:
 ```
