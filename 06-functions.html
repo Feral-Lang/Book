@@ -162,7 +162,8 @@ They are:</p>
 <li>As C++ functions - Since Feral interpreter is written in C++ programming language, its functions can be written in it too, allowing you to bind C++ and Feral, essentially, enabling use of the plethora of C++ libraries.</li>
 <li>As Feral functions - Feral allows you to write functions in the Feral language itself, which is what you will be doing for the most part and what this guide will elaborate on.</li>
 </ol>
-<p>Both of these types have 2 styles each - as plain global functions, and as <code>pseudo member</code> functions. We will understand this in more detail but let's first grasp the concepts of simple (plain) functions.</p>
+<p>Both of these types have 2 styles each - as plain functions in a source file, and as <code>pseudo member</code> functions. We will understand this in more detail but let's first grasp the concepts of simple (plain) functions.</p>
+<p>Also, note that the function arguments are passed as references - the values that are passed to functions are not copied and the function can change the values should that be required.</p>
 <h3><a class="header" href="#our-first-function" id="our-first-function">Our First Function!</a></h3>
 <p>In Feral, we define functions using the keyword <code>fn</code>. This marks the beginning of a function definition and we then describe the function.
 Let's work on this using our dear old <code>Hello world</code> example.</p>
