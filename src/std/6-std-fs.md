@@ -4,7 +4,7 @@ The **fs** module allow to access and manipulate the file system
 
 All the given examples assume the following imports:
 ```
-fs = import('std/fs');
+let fs = import('std/fs');
 let io = import('std/io');
 ```
 And that the following file hierarchy exists in the file system:
