@@ -19,3 +19,4 @@
   - [OS](./std/7-std-os.md)
   - [Sys](./std/8-std-sys.md)
   - [Builder](./std/8-std-builder.md)
+- [Core Functions](./13-core-functions.md)
