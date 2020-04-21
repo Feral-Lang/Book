@@ -98,16 +98,30 @@
 |   `!=`   |             |
 
 ## string
-| Function | Description |
-| :------: | ----------- |
-|   `+`    |             |
-|   `*`    |             |
-|   `+=`   |             |
-|   `*=`   |             |
-|   `<`    |             |
-|   `<=`   |             |
-|   `>=`   |             |
-|   `==`   |             |
-|   `!=`   |             |
-|   `at`   |             |
-|   `[]`   |             |
+|         Function         | Description                                                    |
+| :----------------------: | -------------------------------------------------------------- |
+|           `+`            |                                                                |
+|           `*`            |                                                                |
+|           `+=`           |                                                                |
+|           `*=`           |                                                                |
+|           `<`            |                                                                |
+|           `<=`           |                                                                |
+|           `>=`           |                                                                |
+|           `==`           |                                                                |
+|           `!=`           |                                                                |
+| `at(idx: int) -> string` | Returns the character at index `idx`, or `nil` if out of range |
+|  `[idx: int] -> string`  | Returns the character at index `idx`, or `nil` if out of range |
+
+Examples:
+```
+let io = import('std/io');
+let hello = 'hello!';
+io.println(hello.at(0));
+io.println(hello[5]);
+```
+
+Output:
+```
+h
+(nil)
+```

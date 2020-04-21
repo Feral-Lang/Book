@@ -1,6 +1,7 @@
 # Strings
 
-The **str** module defines the `string` type and all string manipulation related functions.
+The **str** module defines member functions for the native `string` type and other string manipulation related functions.
+The functions available natively in the language can be consulted [here](/13-core-functions.html#string).
 
 A `string` is a sequence of characters. There is no character type in **Feral** and so are represented are one character strings.
 
@@ -205,43 +206,6 @@ io.println(hello);
 Gives the output:
 ```
 hello!
-```
-
-### at
-```
-string.at(idx: int) -> string
-```
-Returns the character at index `idx`, or `nil` if out of range
-
-Example:
-```
-let hello = 'hello';
-io.println(hello.at(0));
-io.println(hello.at(5));
-```
-
-Gives the output:
-```
-h
-(nil)
-```
-### operator []
-```
-string[idx: int] -> string
-```
-Returns the character at index `idx`, or `nil` if out of range
-
-Example:
-```
-let hello = 'hello';
-io.println(hello.at(0));
-io.println(hello.at(5));
-```
-
-Gives the output:
-```
-h
-(nil)
 ```
 
 ### trim
