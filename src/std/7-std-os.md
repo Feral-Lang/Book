@@ -1,6 +1,6 @@
 # OS
 
-The **os** module allow to access to some functionalities of the underlying operating system
+The **os** module allows to access to some functionalities of the underlying operating system
 
 All the given examples assume the following imports:
 ```

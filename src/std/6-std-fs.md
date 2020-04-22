@@ -1,6 +1,6 @@
 # FS
 
-The **fs** module allow to access and manipulate the file system
+The **fs** module allows to access and manipulate the file system
 
 All the given examples assume the following imports:
 ```
