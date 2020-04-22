@@ -14,7 +14,7 @@ git clone https://github.com/Feral-Lang/Feral
 Then, `cd` into the directory, create a `build` directory, cd into that, run `cmake ..`, and finally run `make install`.
 That will build and install the language interpreter, along with its dynamic libraries.
 ```bash
-cd Feral && mkdir build && cd build && cmake .. && make install
+cd Feral && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make install
 ```
 
 Note that you can also specify number of CPU cores using `make -j<number of cores>`. This will greatly improve the build time
@@ -30,7 +30,7 @@ Feral, although usable without its Standard Library, would be extremely limited 
 Therefore, we are going to install the Standard Library for the language. To install it clone the following repository, and then follow the installation procedure just like above.
 ```bash
 git clone https://github.com/Feral-Lang/Feral-Std
-cd Feral-Std && mkdir build && cd build && cmake .. && make install
+cd Feral-Std && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make install
 ```
 
 This will install Feral Standard Library alongside the Feral Compiler. Note that the `PREFIX_DIR` for Feral Compiler and the Standard Library **MUST** be same.
@@ -66,5 +66,5 @@ The script will create these directories with respect to `PREFIX_DIR`:
 
 An example usage is:
 ```bash
-PREFIX_DIR=/usr/local cmake .. && make install
+PREFIX_DIR=/usr/local cmake .. -DCMAKE_BUILD_TYPE=Release && make install
 ```
