@@ -47,7 +47,7 @@ My name is John. I am 21.
 ```
 println(args...) -> nil
 ```
-Prints all given `args` to the standard output and add a new line after the last one
+Prints all given `args` to the standard output and adds a new line after the last one
 
 Example:
 ```
@@ -87,7 +87,7 @@ My name is John. I am 21.
 ```
 fprintln(file: file, args...) -> nil
 ```
-Writes all given `args` to `file` and add a new line after the last one
+Writes all given `args` to `file` and adds a new line after the last one
 
 Example:
 ```
@@ -139,7 +139,7 @@ The possible color codes are the following:
 ```
 cprintln(args...) -> nil
 ```
-Prints all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
+Prints all given `args` to the standard output and adds a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -171,7 +171,7 @@ For the list of available color codes, please refer to [cprint](#cprint)
 ```
 cdprintln(args...) -> nil
 ```
-Prints all given `args` to the standard output and add a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
+Prints all given `args` to the standard output and adds a new line after the last one and interpret color codes to change the text color. A color change is not bound to a single `cprintln` call and will remain active until another one comes in.
 
 Example:
 ```
@@ -207,7 +207,7 @@ You are 21 years old
 ```
 scaneof(prompt: string = '') -> string
 ```
-Reads text from the standard input until *EOF* is found. Even id *EOF* can be emitted by a user (usually *CTRL-D* on UNIX), `scaneof` is more likely to be useful when a **Feral** script takes as an input the output of another program.
+Reads text from the standard input until *EOF* is found. Even if *EOF* can be emitted by a user (usually *CTRL-D* on UNIX), `scaneof` is more likely to be useful when a **Feral** script takes as an input the output of another program.
 
 An optional `prompt` parameter can be passed to write the given string before reading the standard input.
 

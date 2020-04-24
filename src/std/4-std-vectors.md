@@ -268,7 +268,7 @@ Gives the output:
 ```
 vector.slice(start: int, end: int = -1) -> vector
 ```
-Extracts the elements from `start` to `end - 1` and returns them in a new vector. If `end == -1` then the slice ends at the end of the vector
+Extracts the elements from `start` to `end - 1` and returns them in a new vector. If `end == -1` then the slice ends at the end of the vector. Any modification in the elements of a slice will affect its original vector as well
 
 Example:
 ```

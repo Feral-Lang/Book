@@ -122,6 +122,6 @@ io.println(hello[5]);
 
 Output:
 ```
-h
+!
 (nil)
 ```

@@ -2,7 +2,7 @@
 
 The **lang** module offers a way to create user-defined structures and enumerations.
 
-A structure can pack together variables and functions, which allow object-oriented programming.
+A structure can pack together variables and functions, which allows object-oriented programming.
 
 An enumeration is a set of names bounds to constant numerical values.
 
@@ -20,9 +20,9 @@ let io = import('std/io');
 ```
 lang.struct(field = value, ...) -> type
 ```
-Creates a new structure type type holding a set of `field`s. The given `value`s are used to infer the type of each field and as default values during construction. The return type can be used to instantiate objects of this type.
+Creates a new structure type type holding a set of `field`s. The given `value`s are used to infer the type of each field and as default values during construction. The returned type can be used to instantiate objects of this type.
 
-Adding member functions to a type is done with the `let func in type = fn(args) {}` construct, with `func` being the function's name. Inside the function, variables and functions belonging to the type can be accessed using the `self` keyword.
+Adding member functions to a type is done with the `let func in type = fn(args) {};` construct, with `func` being the function's name. Inside the function, variables and functions belonging to the type can be accessed using the `self` keyword.
 
 Example:
 ```

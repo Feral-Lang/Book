@@ -1,6 +1,6 @@
 # Maps
 
-The **map** module defines the `map` type and all the vector manipulation related functions.
+The **map** module defines the `map` type and all the map manipulation related functions.
 
 A `map` is an associative container that can store heterogeneous types.
 
@@ -40,7 +40,7 @@ Gives the output:
 {Answer?: 42, 0: Zero, 1: One}
 ```
  
-Note that the elements are not stored in the order they are given. They are lexicographically sorted
+Note that the elements are not stored in any particular order and thus does not necessarily follow the given one
 
 ### len
 ```

@@ -3,7 +3,7 @@
 The **str** module defines member functions for the native `string` type and other string manipulation related functions.
 The functions available natively in the language can be consulted [here](/13-core-functions.html#string).
 
-A `string` is a sequence of characters. There is no character type in **Feral** and so are represented are one character strings.
+A `string` is a sequence of characters. There is no character type in **Feral** and so are represented as one character strings.
 
 All the given examples assume the following imports:
 ```
