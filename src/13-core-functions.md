@@ -117,11 +117,11 @@ Examples:
 let io = import('std/io');
 let hello = 'hello!';
 io.println(hello.at(0));
-io.println(hello[5]);
+io.println(hello[6]);
 ```
 
 Output:
 ```
-!
+h
 (nil)
 ```

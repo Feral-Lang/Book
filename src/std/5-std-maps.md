@@ -40,7 +40,7 @@ Gives the output:
 {Answer?: 42, 0: Zero, 1: One}
 ```
  
-Note that the elements are not stored in any particular order and thus does not necessarily follow the given one
+Note that the elements are not stored in any particular order and thus do not necessarily follow the given one
 
 ### len
 ```
