@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Loops - Feral Lang</title>
+        <title>Standard Library - Feral Lang</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="08-loops.html" class="active"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="12-standard-library.html"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="std/1-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="std/2-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="std/3-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="std/4-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="std/5-std-maps.html"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="std/6-std-fs.html"><strong aria-hidden="true">10.6.</strong> FS</a></li><li class="chapter-item expanded "><a href="std/7-std-os.html"><strong aria-hidden="true">10.7.</strong> OS</a></li><li class="chapter-item expanded "><a href="std/8-std-ptr.html"><strong aria-hidden="true">10.8.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="std/9-std-sys.html"><strong aria-hidden="true">10.9.</strong> Sys</a></li><li class="chapter-item expanded "><a href="std/10-std-builder.html"><strong aria-hidden="true">10.10.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="12-standard-library.html" class="active"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="std/1-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="std/2-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="std/3-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="std/4-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="std/5-std-maps.html"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="std/6-std-fs.html"><strong aria-hidden="true">10.6.</strong> FS</a></li><li class="chapter-item expanded "><a href="std/7-std-os.html"><strong aria-hidden="true">10.7.</strong> OS</a></li><li class="chapter-item expanded "><a href="std/8-std-ptr.html"><strong aria-hidden="true">10.8.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="std/9-std-sys.html"><strong aria-hidden="true">10.9.</strong> Sys</a></li><li class="chapter-item expanded "><a href="std/10-std-builder.html"><strong aria-hidden="true">10.10.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,95 +147,32 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#loops" id="loops">Loops</a></h1>
-<p>Loops are sequences of code that run over and over again, often as long as some condition is specified. They, like functions, help a lot in reducing redundant pieces of code.</p>
-<p>For example, if we want to make a multiplication table of 12 from 1 to 10, would we write 10 statements by hand? It would look something like this:</p>
-<pre><code class="language-py">let io = import('std/io');
-
-io.println('12 x 1 = ', 12 * 1);
-io.println('12 x 2 = ', 12 * 2);
-io.println('12 x 3 = ', 12 * 3);
-io.println('12 x 4 = ', 12 * 4);
-io.println('12 x 5 = ', 12 * 5);
-io.println('12 x 6 = ', 12 * 6);
-io.println('12 x 7 = ', 12 * 7);
-io.println('12 x 8 = ', 12 * 8);
-io.println('12 x 9 = ', 12 * 9);
-io.println('12 x 10 = ', 12 * 10);
-</code></pre>
-<p>Well, that works I suppose, is it convenient? Nope, but is it really hard? Well, again nope. But think about it. This is just from 1 to 10.
-What about 1 to 100? Or 1 to 1000? Yeah, that becomes far more incovenient now. Downright dreadful even.</p>
-<p>That's where loops come in to save the day! Using a loop, the above program could be written as:</p>
-<pre><code class="language-py">let io = import('std/io');
-
-for let i = 1; i &lt;= 10; ++i {
-	io.println('12 x ', i, ' = ', 12 * i);
-}
-</code></pre>
-<p>Yep, that's it! And if, say, we want to do this even for 1000, all we have to do is change the <code>i &lt;= 10</code> condition to <code>i &lt;= 1000</code>, and boom! It's done! This is a really basic example of loops but it should suffice for now.</p>
-<p>Feral has 3 kinds of loops:</p>
-<ol>
-<li>Simple <code>for</code> loop</li>
-<li><code>foreach</code> loop</li>
-<li><code>while</code> loop</li>
-</ol>
-<h2><a class="header" href="#the-for-loop" id="the-for-loop">The <code>for</code> Loop</a></h2>
-<p>This is probably the most pervasive loop construct across programming languages - for good reason. The <code>for</code> loop is also the most dynamic one that can be used in virtually every situation. This form of loop contains 4 components:</p>
-<ol>
-<li>Initialization - This component is used for initializing the loop, often with some variables - like above we initialized the variable <code>i</code> with the value <code>1</code>.</li>
-<li>Execution Condition - This component is used to put a condition till which the loop should run. As long as the condition evaluates to <code>true</code>, the loop block will continue to be executed (above, <code>i &lt;= 10</code>).</li>
-<li>Increment/Decrement - This component allows for modification in some value - often to update the variable that is being looped through (above, <code>++i</code>) after each execution of the loop block.</li>
-<li>Loop Block - This is the block of code that is executed as long as the condition of loop holds true.</li>
-</ol>
-<p>Aside from loop block, all the other components are optional and we can also skip them all should we want to, which will make for an infinite loop - a loop that never ends.</p>
-<p>Needless to say, the loop we wrote for generating table of <code>12</code> was a <code>for</code> loop.</p>
-<h2><a class="header" href="#the-foreach-loop" id="the-foreach-loop">The <code>foreach</code> Loop</a></h2>
-<p>This form of loop is also called a <code>ranged based for</code> loop because, you guessed it, it works for a range of items. Although, this is helpful for some use cases, as well as for the purpose of readability, it is also not always feasible. For example, skipping the initialization is not possible using <code>foreach</code>. In any case, it's another tool for when it is required.</p>
-<p>The above table of 12 from 1 to 10, in terms of <code>foreach</code> would be like:</p>
-<pre><code class="language-py">let io = import('std/io');
-
-for i in range(1, 11) {
-	io.println('12 x ', i, ' = ', 12 * i);
-}
-</code></pre>
-<p>Note that we used <code>1</code> to <code>11</code> in <code>range()</code> function, instead of <code>1</code> to <code>10</code>. This is because <code>foreach</code> loop runs till the variable is <strong>less than</strong> the end expression. Therefore we have to increase the expression by one. In this case, the condition in terms of <code>for</code> loop would be <code>i &lt; 11</code> which actually is equivalent to <code>i &lt;= 10</code>.</p>
-<h2><a class="header" href="#the-while-loop" id="the-while-loop">The <code>while</code> Loop</a></h2>
-<p>Imagine <code>for</code> loop, but remove the initialization and increment/decrement components. That literally is <code>while</code> loop. This loop can be represented by <code>for</code> as well, but hey, it's syntactic sugar! It avoids the awkwardness of having two useless semicolons (';') that we have to deal with if we use <code>for</code> loop without the initialization and increment/decrement components.</p>
-<p>An example of the <code>while</code> loop using vectors/lists can be:</p>
-<pre><code class="language-py">let io = import('std/io');
-let vec = import('std/vec');
-
-let v = vec.new(1, 2, 3, 4);
-
-while !v.empty() {
-	v.pop();
-}
-</code></pre>
-<p>This is a simple program that just keeps on deleting the last element of the vector until there is nothing left. The same thing, using normal <code>for</code> loop would be:</p>
-<pre><code class="language-py">let io = import('std/io');
-let vec = import('std/vec');
-
-let v = vec.new(1, 2, 3, 4);
-
-for ; !v.empty(); {
-	v.pop();
-}
-</code></pre>
-<p>Not quite pleasing, is it!</p>
-<p>Anyway, that's the fundamentals of loops. Next up, we are going to cover the <code>member functions</code> in Feral.</p>
+                        <h1><a class="header" href="#standard-library" id="standard-library">Standard Library</a></h1>
+<ul>
+<li><a href="./std/1-std-io.html">IO</a></li>
+<li><a href="./std/2-std-lang.html">Lang</a></li>
+<li><a href="./std/3-std-strings.html">Strings</a></li>
+<li><a href="./std/4-std-vectors.html">Vectors</a></li>
+<li><a href="./std/5-std-maps.html">Maps</a></li>
+<li><a href="./std/6-std-fs.html">FS</a></li>
+<li><a href="./std/7-std-os.html">OS</a></li>
+<li><a href="./std/8-std-ptr.html">Ptr</a></li>
+<li><a href="./std/9-std-sys.html">Sys</a></li>
+<li><a href="./std/10-std-builder.html">Builder</a></li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="07-conditionals.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="08-loops.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="12-standard-library.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="std/1-std-io.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -247,13 +184,13 @@ for ; !v.empty(); {
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="07-conditionals.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="08-loops.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="12-standard-library.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="std/1-std-io.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
