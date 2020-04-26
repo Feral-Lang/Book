@@ -27,10 +27,10 @@ let io = import('std/io');
 - [operator []](#operator-)
 - [trim](#trim)
 - [split](#split)
-- [c_to_i](#c_to_i)
+- [byt](#byt)
 
 ## `int` Member Functions
-- [i_to_c](#i_to_c)
+- [chr](#chr)
 
 ### len
 ```
@@ -240,15 +240,15 @@ Gives the output:
 [hello, world]
 ```
 
-### c_to_i
+### byt
 ```
-string.c_to_i() -> int
+string.byt() -> int
 ```
 Converts the first character to its ASCII integer representation. Returns 0 if the string is empty
 
 Example:
 ```
-io.println('0'.c_to_i());
+io.println('0'.byt());
 ```
 
 Gives the output:
@@ -256,15 +256,15 @@ Gives the output:
 48
 ```
 
-### i_to_c
+### chr
 ```
-int.i_to_c() -> string
+int.chr() -> string
 ```
 Converts an integer from its ASCII integer representation to a string
 
 Example:
 ```
-io.println(48.i_to_c());
+io.println(48.chr());
 ```
 
 Gives the output:
