@@ -13,12 +13,10 @@ let io = import('std/io');
  - [exit](#exit)
 
 ## Variables
- - [self_binary](#self_binary)
  - [args](#args)
- - [inc_load_loc](#inc_load_loc)
- - [dll_load_loc](#dll_load_loc)
- - [dll_core_load_loc](#dll_core_load_loc)
- - [feral_home_dir](#feral_home_dir)
+ - [self_binary](#self_binary)
+ - [sys_prefix](#sys_prefix)
+ - [user_prefix](#user_prefix)
 
 ### var_exists
 ```
@@ -56,25 +54,6 @@ else {
 }
 ```
 
-### self_binary
-```
-sys.self_binary: string
-```
-Contains the location of the interpreter, as executed on the command line
-
-Example (*loc.fer*):
-```
-io.println(sys.self_binary);
-```
-
-Possible output:
-```
-$ /usr/local/bin/feral loc.fer
-/usr/local/bin/feral
-$ feral loc.fer
-feral
-```
-
 ### args
 ```
 sys.args: vector<string>
@@ -94,66 +73,53 @@ $ feral args.fer hello world
 [hello, world]
 ```
 
-### inc_load_loc
+### self_binary
 ```
-sys.inc_load_loc: string
+sys.self_binary: string
 ```
-Contains the path to the user modules includes directory
+Contains the location of the interpreter, as executed on the command line
 
-Example:
+Example (*loc.fer*):
 ```
-io.println(sys.inc_load_loc);
-```
-
-Possible output:
-```
-/home/feral/.feral/include
-```
-
-### dll_load_loc
-```
-sys.dll_load_loc: string
-```
-Contains the path to the user modules libraries directory
-
-Example:
-```
-io.println(sys.dll_load_loc);
+io.println(sys.self_binary);
 ```
 
 Possible output:
 ```
-/home/feral/.feral/lib
+$ /usr/local/bin/feral loc.fer
+/usr/local/bin/feral
+$ feral loc.fer
+feral
 ```
 
-### feral_home_dir
+### sys_prefix
 ```
-sys.feral_home_dir: string
+sys.sys_prefix: string
 ```
 Contains the path to the user modules directory
 
 Example:
 ```
-io.println(sys.feral_home_dir);
+io.println(sys.sys_prefix);
+```
+
+Possible output:
+```
+/usr/local
+```
+
+### user_prefix
+```
+sys.user_prefix: string
+```
+Contains the path to the user modules directory
+
+Example:
+```
+io.println(sys.user_prefix);
 ```
 
 Possible output:
 ```
 /home/feral/.feral
-```
-
-### dll_core_load_loc
-```
-sys.dll_core_load_loc: string
-```
-Contains the path to the core modules libraries directory
-
-Example:
-```
-io.println(sys.dll_core_load_loc);
-```
-
-Possible output:
-```
-/usr/local/lib/feral
 ```
