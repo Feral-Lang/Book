@@ -1,4 +1,4 @@
-# Builder
+# Builder (Deprecated)
 
 The **builder** module defines a `builder_t` type that allows to build and install external modules to be used with Feral
 
@@ -15,12 +15,16 @@ let sys = import('std/sys');
 - [new](#new)
 
 ## `builder_t` Member Functions
-- [make_dll](#make_dll)
-- [add_comp_opts](#add_comp_opts)
-- [add_inc](#add_inc)
-- [add_lib](#add_lib)
-- [add_src](#add_src)
-- [perform](#perform)
+- [Builder (Deprecated)](#builder-deprecated)
+  - [Functions](#functions)
+  - [`builder_t` Member Functions](#buildert-member-functions)
+    - [new](#new)
+    - [make_dll](#makedll)
+    - [add_comp_opts](#addcompopts)
+    - [add_inc](#addinc)
+    - [add_lib](#addlib)
+    - [add_src](#addsrc)
+    - [perform](#perform)
 
 ### new
 ```

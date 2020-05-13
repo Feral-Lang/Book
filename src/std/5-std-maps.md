@@ -11,17 +11,20 @@ let io = import('std/io');
 ```
 
 ## Functions
- - [new](#new)
+- [new](#new)
 
 ## `map` Member Functions
- - [len](#len)
- - [insert](#insert)
- - [erase](#erase)
- - [get](#get)
- - [operator []](#operator-)
- - [find](#find)
- - [each](#each)
- - [next](#next)
+- [Maps](#maps)
+  - [Functions](#functions)
+  - [`map` Member Functions](#map-member-functions)
+    - [new](#new)
+    - [len](#len)
+    - [insert](#insert)
+    - [erase](#erase)
+    - [get](#get)
+    - [operator []](#operator)
+    - [each](#each)
+    - [next](#next)
  
 ### new
 ```

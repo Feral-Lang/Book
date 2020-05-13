@@ -11,7 +11,7 @@ let io = import('std/io');
 ```
 
 ## Functions
- - [new](#new)
+- [new](#new)
 
 ## `vector` Member Functions
 

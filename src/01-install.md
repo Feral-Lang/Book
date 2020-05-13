@@ -20,27 +20,13 @@ cd Feral && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && ma
 Note that you can also specify number of CPU cores using `make -j<number of cores>`. This will greatly improve the build time
 of the project. For example, `cmake .. && make -j8 install`
 
-This will generate the Feral libraries and binaries which can be used to execute Feral code. The binary which we will use is called `feral` and it should be generated in `build/bin/` directory of the repository (assuming no `PREFIX_DIR` is set).
+This will generate the Feral libraries and binaries (as well as the required standard libraries) which can be used to execute Feral code. The binary which we will use is called `feral` and it should be generated in `build/bin/` directory of the repository (assuming no `PREFIX_DIR` is set).
 
 You can also install `ccache` to speed up the build process. CMake will autodetect and use it if it finds it.
 
-## Standard Library
+At this point, you may also want to add the `$PREFIX_DIR/bin` directory in your system's `$PATH` variable to directly use `feral` command from any directory. Otherwise, you must execute `feral` as `$PREFIX_DIR/bin/feral` (replace `$PREFIX_DIR` with actual value).
 
-Feral, although usable without its Standard Library, would be extremely limited - to the point of being unusable.
-Therefore, we are going to install the Standard Library for the language. To install it clone the following repository, and then follow the installation procedure just like above.
-```bash
-git clone https://github.com/Feral-Lang/Feral-Std
-cd Feral-Std && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make install
-```
-
-This will install Feral Standard Library alongside the Feral Compiler. Note that the `PREFIX_DIR` for Feral Compiler and the Standard Library **MUST** be same.
-
-The cmake scripts for Feral Compiler as well as Standard Library use multiple environment variables which can be set for customizing and optimizing the build process. They are described below.
-
-## Initializing Feral
-
-When Feral is first installed, it is recommended to execute the `feral init` command.
-This command will create `.feral` directory in your `$HOME` for installation of external packages should that be desired.
+To run the test suite, execute the command `$PREFIX_DIR/bin/feral testdir tests` in the Feral repository directory.
 
 ## CMake Environment Variables
 
