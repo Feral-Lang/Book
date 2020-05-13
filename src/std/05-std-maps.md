@@ -20,7 +20,7 @@ let io = import('std/io');
   - [insert](#insert)
   - [erase](#erase)
   - [get](#get)
-  - [operator []](#operator)
+  - [operator []](#operator-)
   - [each](#each)
   - [next](#next)
  
