@@ -9,9 +9,8 @@ let io = import('std/io');
 ```
 
 ## Functions
-- [Fmt](#fmt)
-  - [Functions](#functions)
-    - [template](#template)
+- [Functions](#functions)
+  - [template](#template)
 
 ### template
 ```
