@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Maps - Feral Lang</title>
+        <title>Ptr - Feral Lang</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="../03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="../05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="../06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="../08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="../12-standard-library.html"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../std/1-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="../std/2-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="../std/3-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../std/4-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="../std/5-std-maps.html" class="active"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="../std/6-std-fs.html"><strong aria-hidden="true">10.6.</strong> FS</a></li><li class="chapter-item expanded "><a href="../std/7-std-os.html"><strong aria-hidden="true">10.7.</strong> OS</a></li><li class="chapter-item expanded "><a href="../std/8-std-ptr.html"><strong aria-hidden="true">10.8.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="../std/9-std-sys.html"><strong aria-hidden="true">10.9.</strong> Sys</a></li><li class="chapter-item expanded "><a href="../std/10-std-builder.html"><strong aria-hidden="true">10.10.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="../13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="../03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="../05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="../06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="../08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="../12-standard-library.html"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../std/01-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="../std/02-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="../std/03-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../std/04-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="../std/05-std-maps.html"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="../std/06-std-fmt.html"><strong aria-hidden="true">10.6.</strong> Fmt</a></li><li class="chapter-item expanded "><a href="../std/07-std-fs.html"><strong aria-hidden="true">10.7.</strong> FS</a></li><li class="chapter-item expanded "><a href="../std/08-std-os.html"><strong aria-hidden="true">10.8.</strong> OS</a></li><li class="chapter-item expanded "><a href="../std/09-std-ptr.html" class="active"><strong aria-hidden="true">10.9.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="../std/10-std-sys.html"><strong aria-hidden="true">10.10.</strong> Sys</a></li><li class="chapter-item expanded "><a href="../std/11-std-builder.html"><strong aria-hidden="true">10.11.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="../13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,131 +147,62 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#maps" id="maps">Maps</a></h1>
-<p>The <strong>map</strong> module defines the <code>map</code> type and all the map manipulation related functions.</p>
-<p>A <code>map</code> is an associative container that can store heterogeneous types.</p>
+                        <h1><a class="header" href="#ptr" id="ptr">Ptr</a></h1>
+<p>The <strong>ptr</strong> module defines the <code>ptr</code> type for pointer-like referencing and modification of existing variables</p>
 <p>All the given examples assume the following imports:</p>
-<pre><code>let map = import('std/map');
+<pre><code>let ptr = import('std/ptr');
 let io = import('std/io');
 </code></pre>
 <h2><a class="header" href="#functions" id="functions">Functions</a></h2>
 <ul>
 <li><a href="#new">new</a></li>
 </ul>
-<h2><a class="header" href="#map-member-functions" id="map-member-functions"><code>map</code> Member Functions</a></h2>
+<h2><a class="header" href="#ptr-member-functions" id="ptr-member-functions"><code>ptr</code> Member Functions</a></h2>
 <ul>
-<li><a href="#len">len</a></li>
-<li><a href="#insert">insert</a></li>
-<li><a href="#erase">erase</a></li>
+<li><a href="#set">set</a></li>
 <li><a href="#get">get</a></li>
-<li><a href="#operator-">operator []</a></li>
-<li><a href="#find">find</a></li>
-<li><a href="#each">each</a></li>
-<li><a href="#next">next</a></li>
 </ul>
 <h3><a class="header" href="#new" id="new">new</a></h3>
-<pre><code>map.new(key1, value1, key2, value2, ...) -&gt; map
+<pre><code>ptr.new(var = nil) -&gt; ptr
 </code></pre>
-<p>Creates a new map using the given key/value pairs. The keys must be convertible to <code>string</code>s. Also, it must correspond a value to each key, meaning that the number of arguments must always be even</p>
+<p>Creates a new pointer, optionally pointing to the given variable <code>var</code>.</p>
 <p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-io.println(m);
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>{Answer?: 42, 0: Zero, 1: One}
-</code></pre>
-<p>Note that the elements are not stored in any particular order and thus do not necessarily follow the given one</p>
-<h3><a class="header" href="#len" id="len">len</a></h3>
-<pre><code>map.len() -&gt; int
-</code></pre>
-<p>Returns the number of key/value pairs inside the map</p>
-<p>Example:</p>
-<pre><code>io.println(map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42).len());
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>3
-</code></pre>
-<h3><a class="header" href="#insert" id="insert">insert</a></h3>
-<pre><code>map.insert(key, value) -&gt; map
-</code></pre>
-<p>Inserts the <code>key</code>/<code>value</code> pair and returns the modified map</p>
-<p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;);
-m.insert(1, &quot;One&quot;);
-io.println(m.insert(&quot;Answer?&quot;, 42));
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>{Answer?: 42, 0: Zero, 1: One}
-</code></pre>
-<h3><a class="header" href="#erase" id="erase">erase</a></h3>
-<pre><code>map.erase(key) -&gt; map
-</code></pre>
-<p>Removes the <code>key</code> and its associated value and returns the modified map</p>
-<p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-m.erase(1);
-io.println(m.erase(&quot;Answer?&quot;));
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>{0: Zero}
+<pre><code>let answer = 42;
+let answer_ptr = ptr.new(answer);
 </code></pre>
 <h3><a class="header" href="#get" id="get">get</a></h3>
-<pre><code>map.get(key) -&gt; map
+<pre><code>ptr.get() -&gt; value
 </code></pre>
-<p>Returns the value associated with <code>key</code>, or <code>nil</code> if it doesn't exist</p>
+<p>Returns the value pointed to, or <code>nil</code> or nil if it does not point to a variable. Can be used to modify to pointed variable</p>
 <p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-io.println(m.get(&quot;Answer?&quot;));
-io.println(m.get(&quot;Oops&quot;));
+<pre><code>let answer = 42;
+let answer_ptr = ptr.new(answer);
+io.println(answer_ptr.get());
+answer_ptr.get() = 12;
+io.println(answer);
+let nil_ptr = ptr.new();    
+io.println(nil_ptr.get());
 </code></pre>
 <p>Gives the output:</p>
 <pre><code>42
+12
 (nil)
 </code></pre>
-<h3><a class="header" href="#operator-" id="operator-">operator []</a></h3>
-<pre><code>map[key] -&gt; value
+<h3><a class="header" href="#set" id="set">set</a></h3>
+<pre><code>ptr.set(value) -&gt; ptr
 </code></pre>
-<p>Returns the value associated with <code>key</code>, or <code>nil</code> if it doesn't exist</p>
+<p>Makes the pointer point to <code>value</code></p>
 <p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-io.println(m[&quot;Answer?&quot;]);
-io.println(m[&quot;Oops&quot;]);
+<pre><code>let answer = 42;
+let pi = 3.14;
+let answer_ptr = ptr.new(answer);
+io.println(answer_ptr.get());
+answer_ptr.set(pi);
+io.println(answer_ptr.get());
 </code></pre>
 <p>Gives the output:</p>
-<pre><code>2
-(nil)
-</code></pre>
-<h3><a class="header" href="#each" id="each">each</a></h3>
-<pre><code>map.each() -&gt; iterator
-</code></pre>
-<p>Returns an iterator pointing to the first key/value pair, allowing easy map iteration</p>
-<p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-for elem in m.each() {
-    io.println(elem.0, &quot;: &quot;, elem.1);
-}
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>Answer?: 42
-0: Zero
-1: One
-</code></pre>
-<h3><a class="header" href="#next" id="next">next</a></h3>
-<pre><code>iterator.next() -&gt; value
-</code></pre>
-<p>Returns the key/value pair pointed by the iterator, or <code>nil</code> if out of range, and then advances the iterator to the next element</p>
-<p>Example:</p>
-<pre><code>let m = map.new(0, &quot;Zero&quot;, 1, &quot;One&quot;, &quot;Answer?&quot;, 42);
-let iter = m.each();
-for i in range(m.len()) {
-    let elem = iter.next();
-    io.println(elem.0, ': ', elem.1);
-}
-</code></pre>
-<p>Gives the output:</p>
-<pre><code>Answer?: 42
-0: Zero
-1: One
+<pre><code>42
+3.14
 </code></pre>
 
                     </main>
@@ -279,13 +210,13 @@ for i in range(m.len()) {
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../std/4-std-vectors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../std/08-std-os.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../std/6-std-fs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../std/10-std-sys.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -297,13 +228,13 @@ for i in range(m.len()) {
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../std/4-std-vectors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../std/08-std-os.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../std/6-std-fs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../std/10-std-sys.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="12-standard-library.html"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="std/1-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="std/2-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="std/3-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="std/4-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="std/5-std-maps.html"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="std/6-std-fs.html"><strong aria-hidden="true">10.6.</strong> FS</a></li><li class="chapter-item expanded "><a href="std/7-std-os.html"><strong aria-hidden="true">10.7.</strong> OS</a></li><li class="chapter-item expanded "><a href="std/8-std-ptr.html"><strong aria-hidden="true">10.8.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="std/9-std-sys.html"><strong aria-hidden="true">10.9.</strong> Sys</a></li><li class="chapter-item expanded "><a href="std/10-std-builder.html"><strong aria-hidden="true">10.10.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="00-intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="01-install.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="02-hello-world.html"><strong aria-hidden="true">3.</strong> Hello World!</a></li><li class="chapter-item expanded "><a href="03-vars.html"><strong aria-hidden="true">4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="04-data-types.html"><strong aria-hidden="true">5.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="05-input.html"><strong aria-hidden="true">6.</strong> Input</a></li><li class="chapter-item expanded "><a href="06-functions.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="07-conditionals.html"><strong aria-hidden="true">8.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="08-loops.html"><strong aria-hidden="true">9.</strong> Loops</a></li><li class="chapter-item expanded "><a href="12-standard-library.html"><strong aria-hidden="true">10.</strong> Standard Library</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="std/01-std-io.html"><strong aria-hidden="true">10.1.</strong> IO</a></li><li class="chapter-item expanded "><a href="std/02-std-lang.html"><strong aria-hidden="true">10.2.</strong> Lang</a></li><li class="chapter-item expanded "><a href="std/03-std-strings.html"><strong aria-hidden="true">10.3.</strong> Strings</a></li><li class="chapter-item expanded "><a href="std/04-std-vectors.html"><strong aria-hidden="true">10.4.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="std/05-std-maps.html"><strong aria-hidden="true">10.5.</strong> Maps</a></li><li class="chapter-item expanded "><a href="std/06-std-fmt.html"><strong aria-hidden="true">10.6.</strong> Fmt</a></li><li class="chapter-item expanded "><a href="std/07-std-fs.html"><strong aria-hidden="true">10.7.</strong> FS</a></li><li class="chapter-item expanded "><a href="std/08-std-os.html"><strong aria-hidden="true">10.8.</strong> OS</a></li><li class="chapter-item expanded "><a href="std/09-std-ptr.html"><strong aria-hidden="true">10.9.</strong> Ptr</a></li><li class="chapter-item expanded "><a href="std/10-std-sys.html"><strong aria-hidden="true">10.10.</strong> Sys</a></li><li class="chapter-item expanded "><a href="std/11-std-builder.html"><strong aria-hidden="true">10.11.</strong> Builder</a></li></ol></li><li class="chapter-item expanded "><a href="13-core-functions.html"><strong aria-hidden="true">11.</strong> Core Functions</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -178,19 +178,10 @@ That will build and install the language interpreter, along with its dynamic lib
 </code></pre>
 <p>Note that you can also specify number of CPU cores using <code>make -j&lt;number of cores&gt;</code>. This will greatly improve the build time
 of the project. For example, <code>cmake .. &amp;&amp; make -j8 install</code></p>
-<p>This will generate the Feral libraries and binaries which can be used to execute Feral code. The binary which we will use is called <code>feral</code> and it should be generated in <code>build/bin/</code> directory of the repository (assuming no <code>PREFIX_DIR</code> is set).</p>
+<p>This will generate the Feral libraries and binaries (as well as the required standard libraries) which can be used to execute Feral code. The binary which we will use is called <code>feral</code> and it should be generated in <code>build/bin/</code> directory of the repository (assuming no <code>PREFIX_DIR</code> is set).</p>
 <p>You can also install <code>ccache</code> to speed up the build process. CMake will autodetect and use it if it finds it.</p>
-<h2><a class="header" href="#standard-library" id="standard-library">Standard Library</a></h2>
-<p>Feral, although usable without its Standard Library, would be extremely limited - to the point of being unusable.
-Therefore, we are going to install the Standard Library for the language. To install it clone the following repository, and then follow the installation procedure just like above.</p>
-<pre><code class="language-bash">git clone https://github.com/Feral-Lang/Feral-Std
-cd Feral-Std &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake .. -DCMAKE_BUILD_TYPE=Release &amp;&amp; make install
-</code></pre>
-<p>This will install Feral Standard Library alongside the Feral Compiler. Note that the <code>PREFIX_DIR</code> for Feral Compiler and the Standard Library <strong>MUST</strong> be same.</p>
-<p>The cmake scripts for Feral Compiler as well as Standard Library use multiple environment variables which can be set for customizing and optimizing the build process. They are described below.</p>
-<h2><a class="header" href="#initializing-feral" id="initializing-feral">Initializing Feral</a></h2>
-<p>When Feral is first installed, it is recommended to execute the <code>feral init</code> command.
-This command will create <code>.feral</code> directory in your <code>$HOME</code> for installation of external packages should that be desired.</p>
+<p>At this point, you may also want to add the <code>$PREFIX_DIR/bin</code> directory in your system's <code>$PATH</code> variable to directly use <code>feral</code> command from any directory. Otherwise, you must execute <code>feral</code> as <code>$PREFIX_DIR/bin/feral</code> (replace <code>$PREFIX_DIR</code> with actual value).</p>
+<p>To run the test suite, execute the command <code>$PREFIX_DIR/bin/feral testdir tests</code> in the Feral repository directory.</p>
 <h2><a class="header" href="#cmake-environment-variables" id="cmake-environment-variables">CMake Environment Variables</a></h2>
 <h3><a class="header" href="#cxx" id="cxx">$CXX</a></h3>
 <p>This variable is used for specifying the C++ compiler if you do not want to use the ones auto decided by the script which uses <code>g++</code> by default for all operating systems except Android and BSD, for which it uses <code>clang++</code>.</p>
@@ -637,18 +628,19 @@ for ; !v.empty(); {
 </code></pre>
 <p>Not quite pleasing, is it!</p>
 <p>Anyway, that's the fundamentals of loops. Next up, we are going to cover the <code>member functions</code> in Feral.</p>
-<h1><a class="header" href="#standard-library-1" id="standard-library-1">Standard Library</a></h1>
+<h1><a class="header" href="#standard-library" id="standard-library">Standard Library</a></h1>
 <ul>
-<li><a href="./std/1-std-io.html">IO</a></li>
-<li><a href="./std/2-std-lang.html">Lang</a></li>
-<li><a href="./std/3-std-strings.html">Strings</a></li>
-<li><a href="./std/4-std-vectors.html">Vectors</a></li>
-<li><a href="./std/5-std-maps.html">Maps</a></li>
-<li><a href="./std/6-std-fs.html">FS</a></li>
-<li><a href="./std/7-std-os.html">OS</a></li>
-<li><a href="./std/8-std-ptr.html">Ptr</a></li>
-<li><a href="./std/9-std-sys.html">Sys</a></li>
-<li><a href="./std/10-std-builder.html">Builder</a></li>
+<li><a href="./std/01-std-io.html">IO</a></li>
+<li><a href="./std/02-std-lang.html">Lang</a></li>
+<li><a href="./std/03-std-strings.html">Strings</a></li>
+<li><a href="./std/04-std-vectors.html">Vectors</a></li>
+<li><a href="./std/05-std-maps.html">Maps</a></li>
+<li><a href="./std/06-std-fmt.html">Fmt</a></li>
+<li><a href="./std/07-std-fs.html">FS</a></li>
+<li><a href="./std/08-std-os.html">OS</a></li>
+<li><a href="./std/09-std-ptr.html">Ptr</a></li>
+<li><a href="./std/10-std-sys.html">Sys</a></li>
+<li><a href="./std/11-std-builder.html">Builder</a></li>
 </ul>
 <h1><a class="header" href="#io" id="io">IO</a></h1>
 <p>The <strong>IO</strong> module gives access to a variety of functions to print text to a terminal or to a file and read user input.</p>
@@ -657,22 +649,22 @@ for ; !v.empty(); {
 </code></pre>
 <h2><a class="header" href="#functions-1" id="functions-1">Functions</a></h2>
 <ul>
-<li><a href="std/1-std-io.html#print">print</a></li>
-<li><a href="std/1-std-io.html#println">println</a></li>
-<li><a href="std/1-std-io.html#fprint">fprint</a></li>
-<li><a href="std/1-std-io.html#fprintln">fprintln</a></li>
-<li><a href="std/1-std-io.html#cprint">cprint</a></li>
-<li><a href="std/1-std-io.html#cprintln">cprintln</a></li>
-<li><a href="std/1-std-io.html#cdprint">cdprint</a></li>
-<li><a href="std/1-std-io.html#cdprintln">cdprintln</a></li>
-<li><a href="std/1-std-io.html#scan">scan</a></li>
-<li><a href="std/1-std-io.html#scaneof">scaneof</a></li>
-<li><a href="std/1-std-io.html#fflush">fflush</a></li>
+<li><a href="std/01-std-io.html#print">print</a></li>
+<li><a href="std/01-std-io.html#println">println</a></li>
+<li><a href="std/01-std-io.html#fprint">fprint</a></li>
+<li><a href="std/01-std-io.html#fprintln">fprintln</a></li>
+<li><a href="std/01-std-io.html#cprint">cprint</a></li>
+<li><a href="std/01-std-io.html#cprintln">cprintln</a></li>
+<li><a href="std/01-std-io.html#cdprint">cdprint</a></li>
+<li><a href="std/01-std-io.html#cdprintln">cdprintln</a></li>
+<li><a href="std/01-std-io.html#scan">scan</a></li>
+<li><a href="std/01-std-io.html#scaneof">scaneof</a></li>
+<li><a href="std/01-std-io.html#fflush">fflush</a></li>
 </ul>
 <h2><a class="header" href="#variables-1" id="variables-1">Variables</a></h2>
 <ul>
-<li><a href="std/1-std-io.html#stdout">stdout</a></li>
-<li><a href="std/1-std-io.html#stderr">stderr</a></li>
+<li><a href="std/01-std-io.html#stdout">stdout</a></li>
+<li><a href="std/01-std-io.html#stderr">stderr</a></li>
 </ul>
 <h3><a class="header" href="#print" id="print">print</a></h3>
 <pre><code>print(args...) -&gt; nil
@@ -770,7 +762,7 @@ io.cprintln('ERROR: Failed to connect to server.'); # Printed in red, on a new l
 io.cprintln('{y}WARNING: Something went wrong.');   # Printed in yellow, on a new line
 io.cprintln('{0}INFO: Operation successful.');      # Printed in default color, on a new line
 </code></pre>
-<p>For the list of available color codes, please refer to <a href="std/1-std-io.html#cprint">cprint</a></p>
+<p>For the list of available color codes, please refer to <a href="std/01-std-io.html#cprint">cprint</a></p>
 <h3><a class="header" href="#cdprint" id="cdprint">cdprint</a></h3>
 <pre><code>cdprint(args...) -&gt; nil
 </code></pre>
@@ -781,7 +773,7 @@ io.cprint('ERROR: Failed to connect to server.'); # Printed in red on `stderr`
 io.cprint('{y}WARNING: Something went wrong.');   # Printed in yellow on `stderr`
 io.cprint('{0}INFO: Operation successful.');      # Printed in default color on `stderr`
 </code></pre>
-<p>For the list of available color codes, please refer to <a href="std/1-std-io.html#cprint">cprint</a></p>
+<p>For the list of available color codes, please refer to <a href="std/01-std-io.html#cprint">cprint</a></p>
 <h3><a class="header" href="#cdprintln" id="cdprintln">cdprintln</a></h3>
 <pre><code>cdprintln(args...) -&gt; nil
 </code></pre>
@@ -792,7 +784,7 @@ io.cprintln('ERROR: Failed to connect to server.'); # Printed in red, on a new l
 io.cprintln('{y}WARNING: Something went wrong.');   # Printed in yellow, on a new line on `stderr`
 io.cprintln('{0}INFO: Operation successful.');      # Printed in default color, on a new line on `stderr`
 </code></pre>
-<p>For the list of available color codes, please refer to <a href="std/1-std-io.html#cprint">cprint</a></p>
+<p>For the list of available color codes, please refer to <a href="std/01-std-io.html#cprint">cprint</a></p>
 <h3><a class="header" href="#scan" id="scan">scan</a></h3>
 <pre><code>scan(prompt: string = '') -&gt; string
 </code></pre>
@@ -875,8 +867,8 @@ let io = import('std/io');
 </code></pre>
 <h2><a class="header" href="#functions-2" id="functions-2">Functions</a></h2>
 <ul>
-<li><a href="std/2-std-lang.html#struct">struct</a></li>
-<li><a href="std/2-std-lang.html#enum">enum</a></li>
+<li><a href="std/02-std-lang.html#struct">struct</a></li>
+<li><a href="std/02-std-lang.html#enum">enum</a></li>
 </ul>
 <h3><a class="header" href="#struct" id="struct">Struct</a></h3>
 <pre><code>lang.struct(field = value, ...) -&gt; type
@@ -947,25 +939,25 @@ let io = import('std/io');
 </code></pre>
 <h2><a class="header" href="#string-member-functions" id="string-member-functions"><code>string</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/3-std-strings.html#len">len</a></li>
-<li><a href="std/3-std-strings.html#empty">empty</a></li>
-<li><a href="std/3-std-strings.html#front">front</a></li>
-<li><a href="std/3-std-strings.html#back">back</a></li>
-<li><a href="std/3-std-strings.html#push">push</a></li>
-<li><a href="std/3-std-strings.html#pop">pop</a></li>
-<li><a href="std/3-std-strings.html#insert">insert</a></li>
-<li><a href="std/3-std-strings.html#erase">erase</a></li>
-<li><a href="std/3-std-strings.html#lastidx">lastidx</a></li>
-<li><a href="std/3-std-strings.html#set">set</a></li>
-<li><a href="std/3-std-strings.html#at">at</a></li>
-<li><a href="std/3-std-strings.html#operator-">operator []</a></li>
-<li><a href="std/3-std-strings.html#trim">trim</a></li>
-<li><a href="std/3-std-strings.html#split">split</a></li>
-<li><a href="std/3-std-strings.html#c_to_i">c_to_i</a></li>
+<li><a href="std/03-std-strings.html#len">len</a></li>
+<li><a href="std/03-std-strings.html#empty">empty</a></li>
+<li><a href="std/03-std-strings.html#front">front</a></li>
+<li><a href="std/03-std-strings.html#back">back</a></li>
+<li><a href="std/03-std-strings.html#push">push</a></li>
+<li><a href="std/03-std-strings.html#pop">pop</a></li>
+<li><a href="std/03-std-strings.html#insert">insert</a></li>
+<li><a href="std/03-std-strings.html#erase">erase</a></li>
+<li><a href="std/03-std-strings.html#lastidx">lastidx</a></li>
+<li><a href="std/03-std-strings.html#set">set</a></li>
+<li><a href="std/03-std-strings.html#at">at</a></li>
+<li><a href="std/03-std-strings.html#operator-">operator []</a></li>
+<li><a href="std/03-std-strings.html#trim">trim</a></li>
+<li><a href="std/03-std-strings.html#split">split</a></li>
+<li><a href="std/03-std-strings.html#byt">byt</a></li>
 </ul>
 <h2><a class="header" href="#int-member-functions" id="int-member-functions"><code>int</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/3-std-strings.html#i_to_c">i_to_c</a></li>
+<li><a href="std/03-std-strings.html#chr">chr</a></li>
 </ul>
 <h3><a class="header" href="#len" id="len">len</a></h3>
 <pre><code>len() -&gt; int
@@ -1103,22 +1095,22 @@ io.println(hello);
 <p>Gives the output:</p>
 <pre><code>[hello, world]
 </code></pre>
-<h3><a class="header" href="#c_to_i" id="c_to_i">c_to_i</a></h3>
-<pre><code>string.c_to_i() -&gt; int
+<h3><a class="header" href="#byt" id="byt">byt</a></h3>
+<pre><code>string.byt() -&gt; int
 </code></pre>
 <p>Converts the first character to its ASCII integer representation. Returns 0 if the string is empty</p>
 <p>Example:</p>
-<pre><code>io.println('0'.c_to_i());
+<pre><code>io.println('0'.byt());
 </code></pre>
 <p>Gives the output:</p>
 <pre><code>48
 </code></pre>
-<h3><a class="header" href="#i_to_c" id="i_to_c">i_to_c</a></h3>
-<pre><code>int.i_to_c() -&gt; string
+<h3><a class="header" href="#chr" id="chr">chr</a></h3>
+<pre><code>int.chr() -&gt; string
 </code></pre>
 <p>Converts an integer from its ASCII integer representation to a string</p>
 <p>Example:</p>
-<pre><code>io.println(48.i_to_c());
+<pre><code>io.println(48.chr());
 </code></pre>
 <p>Gives the output:</p>
 <pre><code>0
@@ -1132,25 +1124,25 @@ let io = import('std/io');
 </code></pre>
 <h2><a class="header" href="#functions-3" id="functions-3">Functions</a></h2>
 <ul>
-<li><a href="std/4-std-vectors.html#new">new</a></li>
+<li><a href="std/04-std-vectors.html#new">new</a></li>
 </ul>
 <h2><a class="header" href="#vector-member-functions" id="vector-member-functions"><code>vector</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/4-std-vectors.html#len">len</a></li>
-<li><a href="std/4-std-vectors.html#empty">empty</a></li>
-<li><a href="std/4-std-vectors.html#front">front</a></li>
-<li><a href="std/4-std-vectors.html#back">back</a></li>
-<li><a href="std/4-std-vectors.html#push">push</a></li>
-<li><a href="std/4-std-vectors.html#pop">pop</a></li>
-<li><a href="std/4-std-vectors.html#insert">insert</a></li>
-<li><a href="std/4-std-vectors.html#erase">erase</a></li>
-<li><a href="std/4-std-vectors.html#lastidx">lastidx</a></li>
-<li><a href="std/4-std-vectors.html#set">set</a></li>
-<li><a href="std/4-std-vectors.html#at">at</a></li>
-<li><a href="std/4-std-vectors.html#operator-">operator []</a></li>
-<li><a href="std/4-std-vectors.html#slice">slice</a></li>
-<li><a href="std/4-std-vectors.html#each">each</a></li>
-<li><a href="std/4-std-vectors.html#next">next</a></li>
+<li><a href="std/04-std-vectors.html#len">len</a></li>
+<li><a href="std/04-std-vectors.html#empty">empty</a></li>
+<li><a href="std/04-std-vectors.html#front">front</a></li>
+<li><a href="std/04-std-vectors.html#back">back</a></li>
+<li><a href="std/04-std-vectors.html#push">push</a></li>
+<li><a href="std/04-std-vectors.html#pop">pop</a></li>
+<li><a href="std/04-std-vectors.html#insert">insert</a></li>
+<li><a href="std/04-std-vectors.html#erase">erase</a></li>
+<li><a href="std/04-std-vectors.html#lastidx">lastidx</a></li>
+<li><a href="std/04-std-vectors.html#set">set</a></li>
+<li><a href="std/04-std-vectors.html#at">at</a></li>
+<li><a href="std/04-std-vectors.html#operator-">operator []</a></li>
+<li><a href="std/04-std-vectors.html#slice">slice</a></li>
+<li><a href="std/04-std-vectors.html#each">each</a></li>
+<li><a href="std/04-std-vectors.html#next">next</a></li>
 </ul>
 <h3><a class="header" href="#new" id="new">new</a></h3>
 <pre><code>vec.new(elems...) -&gt; vector
@@ -1361,18 +1353,27 @@ let io = import('std/io');
 </code></pre>
 <h2><a class="header" href="#functions-4" id="functions-4">Functions</a></h2>
 <ul>
-<li><a href="std/5-std-maps.html#new">new</a></li>
+<li><a href="std/05-std-maps.html#new">new</a></li>
 </ul>
 <h2><a class="header" href="#map-member-functions" id="map-member-functions"><code>map</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/5-std-maps.html#len">len</a></li>
-<li><a href="std/5-std-maps.html#insert">insert</a></li>
-<li><a href="std/5-std-maps.html#erase">erase</a></li>
-<li><a href="std/5-std-maps.html#get">get</a></li>
-<li><a href="std/5-std-maps.html#operator-">operator []</a></li>
-<li><a href="std/5-std-maps.html#find">find</a></li>
-<li><a href="std/5-std-maps.html#each">each</a></li>
-<li><a href="std/5-std-maps.html#next">next</a></li>
+<li><a href="std/05-std-maps.html#maps">Maps</a>
+<ul>
+<li><a href="std/05-std-maps.html#functions">Functions</a></li>
+<li><a href="std/05-std-maps.html#map-member-functions"><code>map</code> Member Functions</a>
+<ul>
+<li><a href="std/05-std-maps.html#new">new</a></li>
+<li><a href="std/05-std-maps.html#len">len</a></li>
+<li><a href="std/05-std-maps.html#insert">insert</a></li>
+<li><a href="std/05-std-maps.html#erase">erase</a></li>
+<li><a href="std/05-std-maps.html#get">get</a></li>
+<li><a href="std/05-std-maps.html#operator">operator []</a></li>
+<li><a href="std/05-std-maps.html#each">each</a></li>
+<li><a href="std/05-std-maps.html#next">next</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3><a class="header" href="#new-1" id="new-1">new</a></h3>
 <pre><code>map.new(key1, value1, key2, value2, ...) -&gt; map
@@ -1478,6 +1479,47 @@ for i in range(m.len()) {
 0: Zero
 1: One
 </code></pre>
+<h1><a class="header" href="#fmt" id="fmt">Fmt</a></h1>
+<p>The <strong>fmt</strong> module provides string formatting capabilities.</p>
+<p>All the given examples assume the following imports:</p>
+<pre><code>let fmt = import('std/fmt');
+let io = import('std/io');
+</code></pre>
+<h2><a class="header" href="#functions-5" id="functions-5">Functions</a></h2>
+<ul>
+<li><a href="std/06-std-fmt.html#fmt">Fmt</a>
+<ul>
+<li><a href="std/06-std-fmt.html#functions">Functions</a>
+<ul>
+<li><a href="std/06-std-fmt.html#template">template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#template" id="template">template</a></h3>
+<pre><code>fmt.template(string) -&gt; string
+</code></pre>
+<p>Takes a template string, evaluates it, and returns the final string. Does <strong>not</strong> modify the original string.
+A template string contains snippets of code in between the usual string content. These snippets of code must be valid Feral expressions and enclosed between opening and closing <strong>braces</strong> (<code>{&lt;expression here&gt;}</code>).</p>
+<p>Example:</p>
+<pre><code>let x = 5, y = 10;
+let template_str = '{x} + {y} = {x + y}';
+io.println(fmt.template(template_str));
+</code></pre>
+<p>Gives the output:</p>
+<pre><code>5 + 10 = 15
+</code></pre>
+<p>Note that to avoid a pair of <code>{</code> and <code>}</code> being considered as part of template when calling <code>fmt.template</code>, just escape the opening brace (<code>{</code>) with <strong>double</strong> backslash (<code>\\</code> (one for lexer, other for template function)). This will also leave the pair of braces as it is.</p>
+<p>Example:</p>
+<pre><code>let x = 5, y = 10;
+let template_str = '\\{x} + \\{y} = {x + y}';
+io.println(fmt.template(template_str));
+</code></pre>
+<p>Gives the output:</p>
+<pre><code>{x} + {y} = 15
+</code></pre>
+<p>Nested templates are possible as well should they be required.</p>
 <h1><a class="header" href="#fs" id="fs">FS</a></h1>
 <p>The <strong>fs</strong> module allows to access and manipulate the file system</p>
 <p>All the given examples assume the following imports:</p>
@@ -1492,19 +1534,19 @@ let io = import('std/io');
     |- hello.txt
     |- world.txt
 </code></pre>
-<h2><a class="header" href="#functions-5" id="functions-5">Functions</a></h2>
+<h2><a class="header" href="#functions-6" id="functions-6">Functions</a></h2>
 <ul>
-<li><a href="std/6-std-fs.html#exists">exists</a></li>
-<li><a href="std/6-std-fs.html#open">open</a></li>
-<li><a href="std/6-std-fs.html#walkdir">walkdir</a></li>
+<li><a href="std/07-std-fs.html#exists">exists</a></li>
+<li><a href="std/07-std-fs.html#open">open</a></li>
+<li><a href="std/07-std-fs.html#walkdir">walkdir</a></li>
 </ul>
 <h2><a class="header" href="#file-member-functions" id="file-member-functions"><code>file</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/6-std-fs.html#lines">lines</a></li>
-<li><a href="std/6-std-fs.html#read_blocks">read_blocks</a></li>
-<li><a href="std/6-std-fs.html#seek">seek</a></li>
-<li><a href="std/6-std-fs.html#each_line">each_line</a></li>
-<li><a href="std/6-std-fs.html#next">next</a></li>
+<li><a href="std/07-std-fs.html#lines">lines</a></li>
+<li><a href="std/07-std-fs.html#read_blocks">read_blocks</a></li>
+<li><a href="std/07-std-fs.html#seek">seek</a></li>
+<li><a href="std/07-std-fs.html#each_line">each_line</a></li>
+<li><a href="std/07-std-fs.html#next">next</a></li>
 </ul>
 <h3><a class="header" href="#exists" id="exists">exists</a></h3>
 <pre><code>fs.exists(path: string) -&gt; bool
@@ -1585,9 +1627,9 @@ for quote in quotes.each() {
 </code></pre>
 <p>Gives output:</p>
 <pre><code>Quotes found:
- - The greatest glory in living lies not in never falling, but in rising every time we fall.
- - The way to get started is to quit talking and begin doing.
- - Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.
+- The greatest glory in living lies not in never falling, but in rising every time we fall.
+- The way to get started is to quit talking and begin doing.
+- Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.
 </code></pre>
 <p>Given the file <code>dir1/foo.txt</code>:</p>
 <pre><code>Top quotes:
@@ -1677,24 +1719,24 @@ John
 <pre><code>let os = import('std/os');
 let io = import('std/io');
 </code></pre>
-<h2><a class="header" href="#functions-6" id="functions-6">Functions</a></h2>
+<h2><a class="header" href="#functions-7" id="functions-7">Functions</a></h2>
 <ul>
-<li><a href="std/7-std-os.html#sleep">sleep</a></li>
-<li><a href="std/7-std-os.html#get_env">get_env</a></li>
-<li><a href="std/7-std-os.html#set_env">set_env</a></li>
-<li><a href="std/7-std-os.html#exec">exec</a></li>
-<li><a href="std/7-std-os.html#find_exec">find_exec</a></li>
-<li><a href="std/7-std-os.html#install">install</a></li>
-<li><a href="std/7-std-os.html#get_cwd">get_cwd</a></li>
-<li><a href="std/7-std-os.html#set_cwd">set_cwd</a></li>
-<li><a href="std/7-std-os.html#mkdir">mkdir</a></li>
-<li><a href="std/7-std-os.html#rm">rm</a></li>
-<li><a href="std/7-std-os.html#copy">copy</a></li>
-<li><a href="std/7-std-os.html#chmod">chmod</a></li>
+<li><a href="std/08-std-os.html#sleep">sleep</a></li>
+<li><a href="std/08-std-os.html#get_env">get_env</a></li>
+<li><a href="std/08-std-os.html#set_env">set_env</a></li>
+<li><a href="std/08-std-os.html#exec">exec</a></li>
+<li><a href="std/08-std-os.html#find_exec">find_exec</a></li>
+<li><a href="std/08-std-os.html#install">install</a></li>
+<li><a href="std/08-std-os.html#get_cwd">get_cwd</a></li>
+<li><a href="std/08-std-os.html#set_cwd">set_cwd</a></li>
+<li><a href="std/08-std-os.html#mkdir">mkdir</a></li>
+<li><a href="std/08-std-os.html#rm">rm</a></li>
+<li><a href="std/08-std-os.html#copy">copy</a></li>
+<li><a href="std/08-std-os.html#chmod">chmod</a></li>
 </ul>
 <h2><a class="header" href="#variables-2" id="variables-2">Variables</a></h2>
 <ul>
-<li><a href="std/7-std-os.html#name">name</a></li>
+<li><a href="std/08-std-os.html#name">name</a></li>
 </ul>
 <h3><a class="header" href="#exists-1" id="exists-1">exists</a></h3>
 <pre><code>os.sleep(ms: int) -&gt; nil
@@ -1834,14 +1876,14 @@ io.println(os.get_cwd());
 <pre><code>let ptr = import('std/ptr');
 let io = import('std/io');
 </code></pre>
-<h2><a class="header" href="#functions-7" id="functions-7">Functions</a></h2>
+<h2><a class="header" href="#functions-8" id="functions-8">Functions</a></h2>
 <ul>
-<li><a href="std/8-std-ptr.html#new">new</a></li>
+<li><a href="std/09-std-ptr.html#new">new</a></li>
 </ul>
 <h2><a class="header" href="#ptr-member-functions" id="ptr-member-functions"><code>ptr</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/8-std-ptr.html#set">set</a></li>
-<li><a href="std/8-std-ptr.html#get">get</a></li>
+<li><a href="std/09-std-ptr.html#set">set</a></li>
+<li><a href="std/09-std-ptr.html#get">get</a></li>
 </ul>
 <h3><a class="header" href="#new-2" id="new-2">new</a></h3>
 <pre><code>ptr.new(var = nil) -&gt; ptr
@@ -1891,19 +1933,16 @@ io.println(answer_ptr.get());
 <pre><code>let sys = import('std/sys');
 let io = import('std/io');
 </code></pre>
-<h2><a class="header" href="#functions-8" id="functions-8">Functions</a></h2>
+<h2><a class="header" href="#functions-9" id="functions-9">Functions</a></h2>
 <ul>
-<li><a href="std/9-std-sys.html#var_exists">var_exists</a></li>
-<li><a href="std/9-std-sys.html#exit">exit</a></li>
+<li><a href="std/10-std-sys.html#var_exists">var_exists</a></li>
+<li><a href="std/10-std-sys.html#exit">exit</a></li>
 </ul>
 <h2><a class="header" href="#variables-3" id="variables-3">Variables</a></h2>
 <ul>
-<li><a href="std/9-std-sys.html#self_binary">self_binary</a></li>
-<li><a href="std/9-std-sys.html#args">args</a></li>
-<li><a href="std/9-std-sys.html#inc_load_loc">inc_load_loc</a></li>
-<li><a href="std/9-std-sys.html#dll_load_loc">dll_load_loc</a></li>
-<li><a href="std/9-std-sys.html#dll_core_load_loc">dll_core_load_loc</a></li>
-<li><a href="std/9-std-sys.html#feral_home_dir">feral_home_dir</a></li>
+<li><a href="std/10-std-sys.html#args">args</a></li>
+<li><a href="std/10-std-sys.html#self_binary">self_binary</a></li>
+<li><a href="std/10-std-sys.html#prefix">prefix</a></li>
 </ul>
 <h3><a class="header" href="#var_exists" id="var_exists">var_exists</a></h3>
 <pre><code>sys.var_exists(name: str) -&gt; bool
@@ -1931,19 +1970,6 @@ else {
     sys.exit(-1);
 }
 </code></pre>
-<h3><a class="header" href="#self_binary" id="self_binary">self_binary</a></h3>
-<pre><code>sys.self_binary: string
-</code></pre>
-<p>Contains the location of the interpreter, as executed on the command line</p>
-<p>Example (<em>loc.fer</em>):</p>
-<pre><code>io.println(sys.self_binary);
-</code></pre>
-<p>Possible output:</p>
-<pre><code>$ /usr/local/bin/feral loc.fer
-/usr/local/bin/feral
-$ feral loc.fer
-feral
-</code></pre>
 <h3><a class="header" href="#args" id="args">args</a></h3>
 <pre><code>sys.args: vector&lt;string&gt;
 </code></pre>
@@ -1957,47 +1983,30 @@ feral
 $ feral args.fer hello world
 [hello, world]
 </code></pre>
-<h3><a class="header" href="#inc_load_loc" id="inc_load_loc">inc_load_loc</a></h3>
-<pre><code>sys.inc_load_loc: string
+<h3><a class="header" href="#self_binary" id="self_binary">self_binary</a></h3>
+<pre><code>sys.self_binary: string
 </code></pre>
-<p>Contains the path to the user modules includes directory</p>
-<p>Example:</p>
-<pre><code>io.println(sys.inc_load_loc);
-</code></pre>
-<p>Possible output:</p>
-<pre><code>/home/feral/.feral/include
-</code></pre>
-<h3><a class="header" href="#dll_load_loc" id="dll_load_loc">dll_load_loc</a></h3>
-<pre><code>sys.dll_load_loc: string
-</code></pre>
-<p>Contains the path to the user modules libraries directory</p>
-<p>Example:</p>
-<pre><code>io.println(sys.dll_load_loc);
+<p>Contains the location of the interpreter, as executed on the command line</p>
+<p>Example (<em>loc.fer</em>):</p>
+<pre><code>io.println(sys.self_binary);
 </code></pre>
 <p>Possible output:</p>
-<pre><code>/home/feral/.feral/lib
+<pre><code>$ /usr/local/bin/feral loc.fer
+/usr/local/bin/feral
+$ feral loc.fer
+feral
 </code></pre>
-<h3><a class="header" href="#feral_home_dir" id="feral_home_dir">feral_home_dir</a></h3>
-<pre><code>sys.feral_home_dir: string
+<h3><a class="header" href="#prefix" id="prefix">prefix</a></h3>
+<pre><code>sys.prefix: string
 </code></pre>
 <p>Contains the path to the user modules directory</p>
 <p>Example:</p>
-<pre><code>io.println(sys.feral_home_dir);
+<pre><code>io.println(sys.prefix);
 </code></pre>
 <p>Possible output:</p>
-<pre><code>/home/feral/.feral
+<pre><code>/usr/local
 </code></pre>
-<h3><a class="header" href="#dll_core_load_loc" id="dll_core_load_loc">dll_core_load_loc</a></h3>
-<pre><code>sys.dll_core_load_loc: string
-</code></pre>
-<p>Contains the path to the core modules libraries directory</p>
-<p>Example:</p>
-<pre><code>io.println(sys.dll_core_load_loc);
-</code></pre>
-<p>Possible output:</p>
-<pre><code>/usr/local/lib/feral
-</code></pre>
-<h1><a class="header" href="#builder" id="builder">Builder</a></h1>
+<h1><a class="header" href="#builder-deprecated" id="builder-deprecated">Builder (Deprecated)</a></h1>
 <p>The <strong>builder</strong> module defines a <code>builder_t</code> type that allows to build and install external modules to be used with Feral</p>
 <p>A guide on how to write and build modules for Feral can be read <a href="https://medium.com/p/writing-c-modules-for-feral-391c30ac7739?source=email-852839018f8a--writer.postDistributed&amp;sk=b2de39e5f849e75e3b4ea9bdeeb1b4db">here</a>.</p>
 <p>All the given examples assume that the <strong>builder</strong> module was imported using:</p>
@@ -2005,18 +2014,28 @@ $ feral args.fer hello world
 let io = import('std/io');
 let sys = import('std/sys');
 </code></pre>
-<h2><a class="header" href="#functions-9" id="functions-9">Functions</a></h2>
+<h2><a class="header" href="#functions-10" id="functions-10">Functions</a></h2>
 <ul>
-<li><a href="std/10-std-builder.html#new">new</a></li>
+<li><a href="std/11-std-builder.html#new">new</a></li>
 </ul>
 <h2><a class="header" href="#builder_t-member-functions" id="builder_t-member-functions"><code>builder_t</code> Member Functions</a></h2>
 <ul>
-<li><a href="std/10-std-builder.html#make_dll">make_dll</a></li>
-<li><a href="std/10-std-builder.html#add_comp_opts">add_comp_opts</a></li>
-<li><a href="std/10-std-builder.html#add_inc">add_inc</a></li>
-<li><a href="std/10-std-builder.html#add_lib">add_lib</a></li>
-<li><a href="std/10-std-builder.html#add_src">add_src</a></li>
-<li><a href="std/10-std-builder.html#perform">perform</a></li>
+<li><a href="std/11-std-builder.html#builder-deprecated">Builder (Deprecated)</a>
+<ul>
+<li><a href="std/11-std-builder.html#functions">Functions</a></li>
+<li><a href="std/11-std-builder.html#buildert-member-functions"><code>builder_t</code> Member Functions</a>
+<ul>
+<li><a href="std/11-std-builder.html#new">new</a></li>
+<li><a href="std/11-std-builder.html#makedll">make_dll</a></li>
+<li><a href="std/11-std-builder.html#addcompopts">add_comp_opts</a></li>
+<li><a href="std/11-std-builder.html#addinc">add_inc</a></li>
+<li><a href="std/11-std-builder.html#addlib">add_lib</a></li>
+<li><a href="std/11-std-builder.html#addsrc">add_src</a></li>
+<li><a href="std/11-std-builder.html#perform">perform</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3><a class="header" href="#new-3" id="new-3">new</a></h3>
 <pre><code>builder.new() -&gt; builder_t
