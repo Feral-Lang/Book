@@ -14,8 +14,9 @@ let io = import('std/io');
 
 ## Variables
 - [args](#args)
-- [self_binary](#self_binary)
-- [prefix](#prefix)
+- [install_prefix](#install_prefix)
+- [self_bin](#self_bin)
+- [self_base](#self_base)
 
 ### var_exists
 ```
@@ -72,34 +73,45 @@ $ feral args.fer hello world
 [hello, world]
 ```
 
-### self_binary
+### self_bin
 ```
-sys.self_binary: string
+sys.self_bin: string
 ```
-Contains the location of the interpreter, as executed on the command line
+Contains the full path of the interpreter, according to binary's location
 
 Example (*loc.fer*):
 ```
-io.println(sys.self_binary);
+io.println(sys.self_bin);
+```
+
+### self_base
+```
+sys.self_base: string
+```
+Contains the base directory of the interpreter, according to binary's location
+
+Example (*loc.fer*):
+```
+io.println(sys.self_base);
 ```
 
 Possible output:
 ```
 $ /usr/local/bin/feral loc.fer
-/usr/local/bin/feral
+/usr/local
 $ feral loc.fer
 feral
 ```
 
-### prefix
+### install_prefix
 ```
-sys.prefix: string
+sys.install_prefix: string
 ```
-Contains the path to the user modules directory
+Contains the path to the feral installation directory
 
 Example:
 ```
-io.println(sys.prefix);
+io.println(sys.install_prefix);
 ```
 
 Possible output:
