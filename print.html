@@ -1932,8 +1932,9 @@ let io = import('std/io');
 <h2><a class="header" href="#variables-3" id="variables-3">Variables</a></h2>
 <ul>
 <li><a href="std/10-std-sys.html#args">args</a></li>
-<li><a href="std/10-std-sys.html#self_binary">self_binary</a></li>
-<li><a href="std/10-std-sys.html#prefix">prefix</a></li>
+<li><a href="std/10-std-sys.html#install_prefix">install_prefix</a></li>
+<li><a href="std/10-std-sys.html#self_bin">self_bin</a></li>
+<li><a href="std/10-std-sys.html#self_base">self_base</a></li>
 </ul>
 <h3><a class="header" href="#var_exists" id="var_exists">var_exists</a></h3>
 <pre><code>sys.var_exists(name: str) -&gt; bool
@@ -1974,25 +1975,32 @@ else {
 $ feral args.fer hello world
 [hello, world]
 </code></pre>
-<h3><a class="header" href="#self_binary" id="self_binary">self_binary</a></h3>
-<pre><code>sys.self_binary: string
+<h3><a class="header" href="#self_bin" id="self_bin">self_bin</a></h3>
+<pre><code>sys.self_bin: string
 </code></pre>
-<p>Contains the location of the interpreter, as executed on the command line</p>
+<p>Contains the full path of the interpreter, according to binary's location</p>
 <p>Example (<em>loc.fer</em>):</p>
-<pre><code>io.println(sys.self_binary);
+<pre><code>io.println(sys.self_bin);
+</code></pre>
+<h3><a class="header" href="#self_base" id="self_base">self_base</a></h3>
+<pre><code>sys.self_base: string
+</code></pre>
+<p>Contains the base directory of the interpreter, according to binary's location</p>
+<p>Example (<em>loc.fer</em>):</p>
+<pre><code>io.println(sys.self_base);
 </code></pre>
 <p>Possible output:</p>
 <pre><code>$ /usr/local/bin/feral loc.fer
-/usr/local/bin/feral
+/usr/local
 $ feral loc.fer
 feral
 </code></pre>
-<h3><a class="header" href="#prefix" id="prefix">prefix</a></h3>
-<pre><code>sys.prefix: string
+<h3><a class="header" href="#install_prefix" id="install_prefix">install_prefix</a></h3>
+<pre><code>sys.install_prefix: string
 </code></pre>
-<p>Contains the path to the user modules directory</p>
+<p>Contains the path to the feral installation directory</p>
 <p>Example:</p>
-<pre><code>io.println(sys.prefix);
+<pre><code>io.println(sys.install_prefix);
 </code></pre>
 <p>Possible output:</p>
 <pre><code>/usr/local
